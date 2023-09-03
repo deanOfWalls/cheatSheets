@@ -1,1 +1,1 @@
-Add cheatsheet for generics
+Add cheatsheet for generics.
