@@ -1,0 +1,50 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a background color to the whole page */
+body {
+  background-color: #0D1117;
+  color: #C9D1D9;
+  font-family: Arial, sans-serif;
+}
+
+/* Style headers */
+h1, h2, h3 {
+  color: #C9D1D9;
+  margin-bottom: 10px;
+}
+
+/* Style lists */
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Style code blocks */
+code {
+  background-color: #161B22;
+  color: #C9D1D9;
+  padding: 5px;
+  border-radius: 3px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Style inline code */
+li code {
+  display: inline;
+}
+
+/* Style the container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
