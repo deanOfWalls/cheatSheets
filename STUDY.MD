@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" media="all" href="./style.css" />
+
 # Java Study Guide for Entry-Level Software Developer Interviews
 
 ## Java Basics
