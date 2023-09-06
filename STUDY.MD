@@ -157,4 +157,4 @@ public class Singleton {
 ### WET vs DRY
 - **WET (Write Everything Twice, Waste Everyone's Time)**:
 
-_Topics Compiled by Andre B. Davis. Explanations generated using ChatGPT._
+_Topics Compiled by [Andre B. Davis.](https://andrebdavis.github.io/) Explanations generated using [ChatGPT.](http://chatgpt.com)_
