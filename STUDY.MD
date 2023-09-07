@@ -3,12 +3,45 @@
 <!-- HTML, CSS, and JavaScript code embedded in Markdown -->
 
 <style>
+  /* Reset some default browser styles */
+  body, h1, h2, h3, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Apply a background color to the whole page */
+  body {
+    background-color: #0D1117;
+    color: #C9D1D9;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Light mode */
+  body:not(.dark-mode) {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  /* Style headers */
+  h1, h2, h3 {
+    color: #C9D1D9;
+  }
+
+  /* Light mode headers */
+  body:not(.dark-mode) h1, body:not(.dark-mode) h2, body:not(.dark-mode) h3 {
+    color: #000000;
+  }
+
+  /* Style terms */
   .term {
     cursor: pointer;
     font-weight: bold;
   }
+
+  /* Style explanations */
   .explanation {
     display: none;
+    font-weight: normal;  /* Add this line */
   }
 </style>
 
@@ -46,6 +79,7 @@
 ## Java Basics
 
 <div class="term" onclick="toggleExplanation(this)">JDK, JRE, JVM
+
   <div class="explanation">
     - **JDK (Java Development Kit)**: A software development environment for Java. Think of it as a toolbox that includes JRE and development tools like the compiler (`javac`).
     - **JRE (Java Runtime Environment)**: Provides the libraries and JVM needed to run compiled Java code. Imagine it as the stage where the Java "play" is performed.
