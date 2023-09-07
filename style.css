@@ -11,10 +11,20 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* Light mode */
+body:not(.dark-mode) {
+  background-color: #ffffff;
+  color: #000000;
+}
+
 /* Style headers */
 h1, h2, h3 {
   color: #C9D1D9;
-  margin-bottom: 10px;
+}
+
+/* Light mode headers */
+body:not(.dark-mode) h1, body:not(.dark-mode) h2, body:not(.dark-mode) h3 {
+  color: #000000;
 }
 
 /* Style lists */
@@ -35,6 +45,12 @@ code {
   border-radius: 3px;
   display: block;
   margin-bottom: 10px;
+}
+
+/* Light mode code blocks */
+body:not(.dark-mode) code {
+  background-color: #f1f1f1;
+  color: #000000;
 }
 
 /* Style inline code */
