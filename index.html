@@ -2,41 +2,103 @@
 <html>
 <head>
   <title>Comprehensive Java Study Guide</title>
-<style>
-  .term {
-    cursor: pointer;
-    font-weight: bold;
-  }
-  .explanation {
-    display: none;
-    font-weight: normal;  /* Add this line */
-  }
-  body.dark-mode {
-    background-color: #0D1117;
-    color: #C9D1D9;
-  }
-  body {
-    background-color: #ffffff;
-    color: #000000;
-  }
-</style>
+  <style id="theme-style">
+    /* Default light theme */
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      padding: 0;
+    }
 
-</head>
-<body>
-  <button onclick="toggleMode()">Toggle Light/Dark Mode</button>
+    h1, h2 {
+      font-size: 1.5em;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    ol {
+      margin-bottom: 20px;
+    }
+
+    /* Study term styles */
+    .term {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .explanation {
+      visibility: hidden;
+      width: 200px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -100px;
+      opacity: 0;
+    }
+
+    .explanation::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #0D1117;
+      color: #C9D1D9;
+    }
+  </style>
   <script>
     function toggleExplanation(element) {
       const explanation = element.querySelector('.explanation');
-      explanation.style.display = explanation.style.display === 'block' ? 'none' : 'block';
+      if (explanation.style.visibility === 'visible') {
+        explanation.style.visibility = 'hidden';
+        explanation.style.opacity = 0;
+      } else {
+        explanation.style.visibility = 'visible';
+        explanation.style.opacity = 1;
+      }
     }
+
     function toggleMode() {
       const body = document.body;
       body.classList.toggle('dark-mode');
     }
   </script>
+</head>
+<body>
+  <button onclick="toggleMode()">Toggle Light/Dark Mode</button>
   <h1>Comprehensive Java Study Guide for Entry-Level Software Developer Interviews</h1>
   <h2>Table of Contents</h2>
   <ol>
+    <li><a href="#java-basics">Java Basics</a></li>
+    <li><a href="#data-structures">Data Structures</a></li>
+    <li><a href="#object-oriented-programming">Object-Oriented Programming</a></li>
+    <li><a href="#java-features">Java Features</a></li>
+    <li><a href="#programming-principles">Programming Principles</a></li>
+    <li><a href="#java-libraries-and-frameworks">Java Libraries and Frameworks</a></li>
+    <li><a href="#java-tools-and-ides">Java Tools and IDEs</a></li>
+    <li><a href="#java-best-practices">Java Best Practices</a></li>
+    <li><a href="#java-testing">Java Testing</a></li>
+    <li><a href="#miscellaneous">Miscellaneous</a></li>
+  </ol>
     <li><a href="#java-basics">Java Basics</a></li>
     <li><a href="#data-structures">Data Structures</a></li>
     <li><a href="#object-oriented-programming">Object-Oriented Programming</a></li>
