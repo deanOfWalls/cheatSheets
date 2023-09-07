@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comprehensive Java Study Guide</title>
+  <style>
+    .term {
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .explanation {
+      display: none;
+    }
+    body.dark-mode {
+      background-color: #0D1117;
+      color: #C9D1D9;
+    }
+    body {
+      background-color: #ffffff;
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="toggleMode()">Toggle Light/Dark Mode</button>
+  <script>
+    function toggleExplanation(element) {
+      const explanation = element.querySelector('.explanation');
+      explanation.style.display = explanation.style.display === 'block' ? 'none' : 'block';
+    }
+    function toggleMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+    }
+  </script>
+  <h1>Comprehensive Java Study Guide for Entry-Level Software Developer Interviews</h1>
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#java-basics">Java Basics</a></li>
+    <li><a href="#data-structures">Data Structures</a></li>
+    <li><a href="#object-oriented-programming">Object-Oriented Programming</a></li>
+    <li><a href="#java-features">Java Features</a></li>
+    <li><a href="#programming-principles">Programming Principles</a></li>
+    <li><a href="#java-libraries-and-frameworks">Java Libraries and Frameworks</a></li>
+    <li><a href="#java-tools-and-ides">Java Tools and IDEs</a></li>
+    <li><a href="#java-best-practices">Java Best Practices</a></li>
+    <li><a href="#java-testing">Java Testing</a></li>
+    <li><a href="#miscellaneous">Miscellaneous</a></li>
+  </ol>
+  <!-- Java Basics -->
+  <h2 id="java-basics">Java Basics</h2>
+  <div class="term" onclick="toggleExplanation(this)">JDK, JRE, JVM
+    <div class="explanation">
+      - <strong>JDK (Java Development Kit)</strong>: A software development environment for Java. Think of it as a toolbox that includes JRE and development tools like the compiler (javac).
+      - <strong>JRE (Java Runtime Environment)</strong>: Provides the libraries and JVM needed to run compiled Java code. Imagine it as the stage where the Java "play" is performed.
+      - <strong>JVM (Java Virtual Machine)</strong>: Executes Java bytecode. It's like the "actor" who performs the script on the stage.
+    </div>
+  </div>
+  <div class="term" onclick="toggleExplanation(this)">Public Static Void Main
+    <div class="explanation">
+      - <strong>Public Static Void Main</strong>: The entry point for a Java application. public means it's accessible from anywhere, static means it doesn't require an object instance, and void means it returns nothing. Think of it as the main door to a building that anyone can enter.
+    </div>
+  </div>
+  <div class="term" onclick="toggleExplanation(this)">Data Types
+    <div class="explanation">
+      - <strong>Primitive Data Types</strong>: byte, short, int, long, float, double, char, boolean. These are like the basic building blocks in a construction set.
+      - <strong>Non-Primitive Data Types</strong>: Arrays, Strings, and Objects. These are like complex structures made from basic building blocks.
+    </div>
+  </div>
+  <!-- Data Structures -->
+  <h2 id="data-structures">Data Structures</h2>
+  <div class="term" onclick="toggleExplanation(this)">HashMap
+    <div class="explanation">
+      - <strong>HashMap</strong>: A data structure that stores key-value pairs. Think of it as a dictionary where you can quickly look up definitions.
+    </div>
+  </div>
+  <div class="term" onclick="toggleExplanation(this)">List vs Set
+    <div class="explanation">
+      - <strong>List vs Set</strong>: List allows duplicates and maintains order. Set doesn't allow duplicates and may not maintain order. Imagine a List as a playlist where songs can repeat, and a Set as a unique album collection.
+    </div>
+  </div>
+  <!-- Object-Oriented Programming -->
+  <h2 id="object-oriented-programming">Object-Oriented Programming</h2>
+  <div class="term" onclick="toggleExplanation(this)">Abstract Class vs Interface
+    <div class="explanation">
+      - <strong>Abstract Class vs Interface</strong>: Abstract classes can have both abstract and concrete methods. Interfaces can only have abstract methods. Think of an abstract class as a blueprint with some pre-defined features, and an interface as a contract that a class must adhere to.
+    </div>
+  </div>
+  <div class="term" onclick="toggleExplanation(this)">Instance Methods vs Static Methods
+    <div class="explanation">
+      - <strong>Instance Methods vs Static Methods</strong>: Instance methods belong to an instance of the class. Static methods belong to the class itself. Think of instance methods as personal habits that vary from person to person, and static methods as family traditions that are the same for all family members.
+    </div>
+  </div>
+  <!-- Java Features -->
+  <h2 id="java-features">Java Features</h2>
+  <div class="term" onclick="toggleExplanation(this)">Comparable vs Comparator
+    <div class="explanation">
+      - <strong>Comparable vs Comparator</strong>: Comparable provides a single sorting sequence. Comparator allows multiple sorting sequences. Think of Comparable as sorting books by title only, and Comparator as sorting books by title, author, or year.
+    </div>
+  </div>
+  <div class="term" onclick="toggleExplanation(this)">StringBuilder vs StringBuffer
+    <div class="explanation">
+      - <strong>StringBuilder vs StringBuffer</strong>: StringBuilder is not thread-safe. StringBuffer is thread-safe. Think of StringBuilder as a notepad that only one person can write on at a time, and StringBuffer as a notepad that multiple people can write on simultaneously.
+    </div>
+  </div>
+  <!-- Programming Principles -->
+  <h2 id="programming-principles">Programming Principles</h2>
+  <div class="term" onclick="toggleExplanation(this)">WET vs DRY
+    <div class="explanation">
+      - <strong>WET (Write Everything Twice, Waste Everyone's Time)</strong>: Code that is repetitive and not reusable. Think of it as manually washing dishes one by one.
+      - <strong>DRY (Don't Repeat Yourself)</strong>: Code that is modular and reusable. Think of it as using a dishwasher to clean multiple dishes at once.
+    </div>
+  </div>
+  <!-- Java Libraries and Frameworks -->
+  <h2 id="java-libraries-and-frameworks">Java Libraries and Frameworks</h2>
+  <div class="term" onclick="toggleExplanation(this)">Spring Framework
+    <div class="explanation">
+      - <strong>Spring Framework</strong>: A comprehensive framework for building enterprise applications. Think of it as a one-stop-shop for all your enterprise software needs.
+    </div>
+  </div>
+  <div class="term" onclick="toggleExplanation(this)">Hibernate
+    <div class="explanation">
+      - <strong>Hibernate</strong>: An Object-Relational Mapping (ORM) library for Java. Think of it as a translator between your Java code and the database.
+    </div>
+  </div>
+  <!-- Java Tools and IDEs -->
+  <h2 id="java-tools-and-ides">Java Tools and IDEs</h2>
+  <div class="term" onclick="toggleExplanation(this)">Eclipse
+    <div class="explanation">
+      - <strong>Eclipse</strong>: An open-source IDE for Java development. Think of it as a workshop equipped with all the tools you need for Java development.
+    </div>
+  </div>
+  <div class="term" onclick="toggleExplanation(this)">IntelliJ IDEA
+    <div class="explanation">
+      - <strong>IntelliJ IDEA</strong>: A popular IDE for Java development. Think of it as a high-tech lab for Java experiments.
+    </div>
+  </div>
+  <!-- Java Best Practices -->
+  <h2 id="java-best-practices">Java Best Practices</h2>
+  <div class="term" onclick="toggleExplanation(this)">Code Style
+    <div class="explanation">
+      - <strong>Code Style</strong>: Follow a consistent code style for better readability and maintainability. Think of it as following a dress code for a formal event.
+    </div>
+  </div>
+  <div class="term" onclick="toggleExplanation(this)">Comments and Documentation
+    <div class="explanation">
+      - <strong>Comments and Documentation</strong>: Write meaningful comments and documentation. Think of it as leaving a guidebook for travelers exploring a new city.
+    </div>
+  </div>
+  <div class="term" onclick="toggleExplanation(this)">Error Handling
+    <div class="explanation">
+      - <strong>Error Handling</strong>: Use proper error handling mechanisms instead of relying on default system output. Think of it as having a first-aid kit ready for emergencies.
+    </div>
+  </div>
+  <!-- Java Testing -->
+  <h2 id="java-testing">Java Testing</h2>
+  <div class="term" onclick="toggleExplanation(this)">Unit Testing
+    <div class="explanation">
+      - <strong>Unit Testing</strong>: Testing the smallest parts of the application in isolation. Think of it as quality checking each ingredient before adding it to a recipe.
+    </div>
+  </div>
+  <div class="term" onclick="toggleExplanation(this)">Integration Testing
+    <div class="explanation">
+      - <strong>Integration Testing</strong>: Testing the interaction between integrated components. Think of it as taste-testing a dish after all ingredients have been mixed.
+    </div>
+  </div>
+  <div class="term" onclick="toggleExplanation(this)">System Testing
+    <div class="explanation">
+      - <strong>System Testing</strong>: Testing the system as a whole. Think of it as reviewing the entire dining experience, from appetizer to dessert.
+    </div>
+  </div>
+  <!-- Miscellaneous -->
+  <h2 id="miscellaneous">Miscellaneous</h2>
+  <div class="term" onclick="toggleExplanation(this)">JDBC
+    <div class="explanation">
+      - <strong>JDBC (Java Database Connectivity)</strong>: An API for connecting Java applications to databases. Think of it as a universal adapter for various types of databases.
+    </div>
+  </div>
+  <div class="term" onclick="toggleExplanation(this)">RESTful Web Services
+    <div class="explanation">
+      - <strong>RESTful Web Services</strong>: An architectural style for designing networked applications. Think of it as a set of rules for how different software components should communicate.
+    </div>
+  </div>
+  <div class="term" onclick="toggleExplanation(this)">Threads and Multithreading
+    <div class="explanation">
+      - <strong>Threads and Multithreading</strong>: A way to perform many tasks simultaneously. Think of it as having multiple chefs in a kitchen, each responsible for a different task.
+    </div>
+  </div>
+  <footer>
+    <p>Topics Compiled by <a href="https://andrebdavis.github.io/">Andre B. Davis</a>. Explanations generated using <a href="http://chatgpt.com">ChatGPT</a>.</p>
+  </footer>
+</body>
+</html>
