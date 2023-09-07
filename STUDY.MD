@@ -131,7 +131,6 @@
 - **Dependency Inversion Principle**: High-level modules should not depend on low-level modules; both should depend on abstractions.
 
 ### Miscellaneous (🟡 Important)
-- **Enums**: Allows variables to be a set of predefined constants.
 - **Autoboxing**: Automatic conversion of primitive types to their object wrapper classes.
 
 ---
