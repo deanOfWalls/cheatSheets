@@ -5,6 +5,7 @@
 <style>
   .term {
     cursor: pointer;
+    font-weight: bold;
   }
   .explanation {
     display: none;
@@ -16,7 +17,17 @@
     const explanation = element.querySelector('.explanation');
     explanation.style.display = explanation.style.display === 'block' ? 'none' : 'block';
   }
+
+  function toggleMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+  }
 </script>
+
+<button onclick="toggleMode()">Toggle Light/Dark Mode</button>
+
+<!-- Rest of the content remains the same -->
+
 
 ## Table of Contents
 1. [Java Basics](#java-basics)
