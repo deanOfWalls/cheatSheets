@@ -192,4 +192,4 @@
 
 ---
 
-_Topics Compiled by [Andre B. Davis](https://andrebdavis.github.io/) and ChatGPT. Explanations generated using [ChatGPT](http://chatgpt.com)._  
+_Topic Contributions from [Andre B. Davis](https://andrebdavis.github.io/) and ChatGPT. Explanations generated using [ChatGPT](http://chatgpt.com)._  
