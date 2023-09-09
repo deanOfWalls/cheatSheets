@@ -15,33 +15,41 @@
 
 ---
 
+<a id="java-basics"></a>
 ## Java Basics
 
+<a id="jdk-jre-jvm"></a>
 ### JDK, JRE, JVM (🟢 Essential)
 - **JDK (Java Development Kit)**: The complete software development kit for Java.
 - **JRE (Java Runtime Environment)**: Required to run Java applications.
 - **JVM (Java Virtual Machine)**: Executes Java bytecode.
 
+<a id="public-static-void-main"></a>
 ### Public Static Void Main (🟢 Essential)
 - **Public Static Void Main**: The entry point for a Java application.
 
 ---
 
+<a id="data-types-and-structures"></a>
 ## Data Types and Structures
 
+<a id="primitive-and-non-primitive-data-types"></a>
 ### Primitive and Non-Primitive Data Types (🟢 Essential)
 - **Primitive Data Types**: `byte`, `short`, `int`, `long`, `float`, `double`, `char`, `boolean`.
 - **Non-Primitive Data Types**: Arrays, Strings, and Objects.
 
+<a id="enums"></a>
 ### Enums (🟡 Important)
 - **Enums**: Allows a variable to be a set of predefined constants.
 
+<a id="data-structures"></a>
 ### Data Structures (🟢 Essential)
 - **HashMap**: Stores key-value pairs.
 - **List vs Set**: List allows duplicates, Set doesn't.
 - **Stack and Queue**: LIFO and FIFO data structures respectively.
 
-## Object-Oriented Programming (🟢 Essential)
+<a id="object-oriented-programming"></a>
+## Object-Oriented Programming
 
 ### Core Principles (🟢 Essential)
 - **Encapsulation**: Bundles data and methods that operate on that data.
@@ -56,42 +64,63 @@
 - **Interface Segregation Principle**: Clients should not be forced to depend on interfaces they do not use.
 - **Dependency Inversion Principle**: High-level modules should not depend on low-level modules; both should depend on abstractions.
 
+### Static vs Instance (🟢 Essential)
+- **Static Members**: Belong to the class rather than any specific instance. Accessed using the class name.
+  - **Static Methods**: Can only access static members. Cannot use `this` or `super`.
+  - **Static Variables**: Shared among all instances of the class.
+  - **Static Block**: Used for initializing static variables. Executed once when the class is loaded.
+- **Instance Members**: Belong to instances of the class. Accessed using the instance (object).
+  - **Instance Methods**: Can access both static and instance members. Can use `this` and `super`.
+  - **Instance Variables**: Each instance has its own copy.
+  - **Constructors**: Special instance methods for initializing new objects.
+
 ---
 
-## Java Features (🟢 Essential)
+<a id="java-features"></a>
+## Java Features
 
+<a id="generics"></a>
 ### Generics (🟢 Essential)
 - **Generics**: Provides type safety and reusability.
 
+<a id="annotations"></a>
 ### Annotations (🟢 Essential)
 - **Annotations**: Metadata that can be added to Java code.
 
+<a id="stringbuilder-vs-stringbuffer"></a>
 ### StringBuilder vs StringBuffer (🟢 Essential)
 - **StringBuilder**: Not thread-safe but faster.
 - **StringBuffer**: Thread-safe but slower.
 
+<a id="comparable-vs-comparator"></a>
 ### Comparable vs Comparator (🟢 Essential)
 - **Comparable**: Single sorting sequence.
 - **Comparator**: Multiple sorting sequences.
 
-## Programming Principles (🟡 Important)
+<a id="programming-principles"></a>
+## Programming Principles
 
+<a id="code-quality-principles"></a>
 ### Code Quality Principles (🟡 Important)
 - **DRY (Don't Repeat Yourself)**: Encourages code reusability.
 - **KISS (Keep It Simple, Stupid)**: Advocates for simplicity in code.
 - **WET (Write Everything Twice, Waste Everyone's Time)**: What to avoid; leads to repetitive and hard-to-maintain code.
 
+<a id="data-organization-principles"></a>
 ### Data Organization Principles (🟡 Important)
 - **FIFO (First-In-First-Out)**: Data organization in a queue.
 - **LIFO (Last-In-First-Out)**: Data organization in a stack.
 
 ---
 
-## Java Libraries and Frameworks (🟡 Important)
+<a id="java-libraries-and-frameworks"></a>
+## Java Libraries and Frameworks
 
+<a id="spring-boot"></a>
 ### Spring Boot (🟢 Essential)
 - **Spring Boot**: Simplifies the setup and development of Spring applications.
   
+<a id="essential-spring-boot-annotations"></a>
 ### Essential Spring Boot Annotations (🟢 Essential)
 - **`@SpringBootApplication`**: Entry point for a Spring Boot application.
 - **`@Controller` and `@RestController`**: Define controllers.
@@ -99,37 +128,46 @@
 - **`@RequestMapping`**: Maps web requests onto methods.
 - **`@GetMapping`, `@PostMapping`, etc.**: Handle different types of HTTP methods.
 
+<a id="other-libraries-and-frameworks"></a>
 ### Other Libraries and Frameworks (🟡 Important)
 - **JUnit**: For unit testing.
 - **Maven and Gradle**: Build and dependency management.
 - **Spring Data JPA**: Simplifies data access.
 - **Spring Security**: Provides authentication and authorization.
 
-## Web Concepts (🟡 Important)
+<a id="web-concepts"></a>
+## Web Concepts
 
+<a id="rest-and-api"></a>
 ### REST and API (🟢 Essential)
 - **REST (Representational State Transfer)**: Architectural style for networked applications.
 - **API (Application Programming Interface)**: Rules and protocols for software interaction.
 
+<a id="web-security"></a>
 ### Web Security (🟡 Important)
 - **CORS (Cross-Origin Resource Sharing)**: Controls cross-origin requests.
 - **Stateless**: Each request must contain all information needed for processing.
 
+<a id="web-document-structure"></a>
 ### Web Document Structure (🟡 Important)
 - **DOM (Document Object Model)**: Represents the structure of web documents.
 
 ---
 
-## Additional Topics (🟡 Important)
+<a id="additional-topics"></a>
+## Additional Topics
 
+<a id="design-patterns"></a>
 ### Design Patterns (🟡 Important)
 - **Singletons**: Ensures a class has only one instance.
 - **Liskov's Substitution Principle**: Subtypes must be substitutable for their base types.
 
+<a id="software-architecture-principles"></a>
 ### Software Architecture Principles (🟡 Important)
 - **Interface Segregation Principle**: Avoids forcing clients to depend on irrelevant interfaces.
 - **Dependency Inversion Principle**: High-level modules should not depend on low-level modules; both should depend on abstractions.
 
+<a id="miscellaneous"></a>
 ### Miscellaneous (🟡 Important)
 - **Autoboxing**: Automatic conversion of primitive types to their object wrapper classes.
 
