@@ -136,7 +136,7 @@
 - **Spring Security**: Provides authentication and authorization.
 
 <a id="web-concepts"></a>
-## Web Concepts (🟡 Important)
+## Web Concepts
 
 <a id="rest-and-api"></a>
 ### REST and API (🟢 Essential)
