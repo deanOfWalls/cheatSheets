@@ -8,6 +8,7 @@
    - [SOLID Principles](#solid-principles)
    - [Static vs Instance](#static-vs-instance)
 4. [Java Features](#java-features)
+4. [Java Features](#java-features)
 5. [Programming Principles](#programming-principles)
 6. [Java Libraries and Frameworks](#java-libraries-and-frameworks)
 7. [Spring Boot](#spring-boot)
