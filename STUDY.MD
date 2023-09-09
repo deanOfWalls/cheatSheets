@@ -4,6 +4,9 @@
 1. [Java Basics](#java-basics)
 2. [Data Types and Structures](#data-types-and-structures)
 3. [Object-Oriented Programming](#object-oriented-programming)
+   - [Core Principles](#core-principles)
+   - [SOLID Principles](#solid-principles)
+   - [Static vs Instance](#static-vs-instance)
 4. [Java Features](#java-features)
 5. [Programming Principles](#programming-principles)
 6. [Java Libraries and Frameworks](#java-libraries-and-frameworks)
@@ -55,6 +58,16 @@
 - **Liskov's Substitution Principle**: Subtypes must be substitutable for their base types.
 - **Interface Segregation Principle**: Clients should not be forced to depend on interfaces they do not use.
 - **Dependency Inversion Principle**: High-level modules should not depend on low-level modules; both should depend on abstractions.
+
+### Static vs Instance (🟢 Essential)
+- **Static Members**: Belong to the class rather than any specific instance. Accessed using the class name.
+  - **Static Methods**: Can only access static members. Cannot use `this` or `super`.
+  - **Static Variables**: Shared among all instances of the class.
+  - **Static Block**: Used for initializing static variables. Executed once when the class is loaded.
+- **Instance Members**: Belong to instances of the class. Accessed using the instance (object).
+  - **Instance Methods**: Can access both static and instance members. Can use `this` and `super`.
+  - **Instance Variables**: Each instance has its own copy.
+  - **Constructors**: Special instance methods for initializing new objects.
 
 ---
 
