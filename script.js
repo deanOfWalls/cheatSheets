@@ -1363,64 +1363,70 @@ const questions = [
 
 ];
 
+
 nextButton.addEventListener('click', () => {
-  const selectedAnswer = document.querySelector('input[name="answer"]:checked');
-  if (!selectedAnswer) return;
-  const answerCorrect = selectedAnswer.value === 'true';
-  if (answerCorrect) {
-    score++;
-    correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
-  } else {
-    incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
-  }
-  currentQuestionIndex++;
-  showNextQuestion();
-});
-
-startGame();
-
-function startGame() {
-  score = 0;
-  correctAnswers = [];
-  incorrectAnswers = [];
-  shuffledQuestions = questions.sort(() => Math.random() - 0.5);
-  currentQuestionIndex = 0;
-  showNextQuestion();
-}
-
-function showNextQuestion() {
-  if (currentQuestionIndex < shuffledQuestions.length) {
-    showQuestion(shuffledQuestions[currentQuestionIndex]);
-  } else {
-    showResult();
-  }
-}
-
-function showQuestion(question) {
-  questionNumber.innerText = `Question ${currentQuestionIndex + 1}`;
-  questionContainer.innerText = question.question;
-  answerForm.innerHTML = '';
-  question.answers.forEach((answer, index) => {
-    const input = document.createElement('input');
-    input.type = 'radio';
-    input.name = 'answer';
-    input.value = answer.correct;
-    input.id = `answer${index}`;
-    const label = document.createElement('label');
-    label.htmlFor = `answer${index}`;
-    label.innerText = answer.text;
-    answerForm.appendChild(input);
-    answerForm.appendChild(label);
-    answerForm.appendChild(document.createElement('br'));
+    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+    if (!selectedAnswer) return;
+    const answerCorrect = selectedAnswer.value === 'true';
+    if (answerCorrect) {
+      score++;
+      correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
+      document.getElementById('feedback').textContent = 'Correct!';
+    } else {
+      incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
+      document.getElementById('feedback').textContent = 'Incorrect!';
+    }
+    currentQuestionIndex++;
+    showNextQuestion();
   });
-}
-
-function showResult() {
-  result.innerHTML = `
-    <h2>Your Score: ${score}</h2>
-    <h3>Correct Answers:</h3>
-    <ul>${correctAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
-    <h3>Incorrect Answers:</h3>
-    <ul>${incorrectAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
-  `;
-}
+  
+  startGame();
+  
+  function startGame() {
+    score = 0;
+    correctAnswers = [];
+    incorrectAnswers = [];
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    currentQuestionIndex = 0;
+    showNextQuestion();
+  }
+  
+  function showNextQuestion() {
+    if (currentQuestionIndex < shuffledQuestions.length) {
+      showQuestion(shuffledQuestions[currentQuestionIndex]);
+      document.getElementById('question-number').textContent = `${currentQuestionIndex + 1}/${shuffledQuestions.length}`;
+      document.getElementById('feedback').textContent = ''; // Clear feedback
+    } else {
+      showResult();
+    }
+  }
+  
+  function showQuestion(question) {
+    questionNumber.innerText = `Question ${currentQuestionIndex + 1}`;
+    questionContainer.innerText = question.question;
+    answerForm.innerHTML = '';
+    question.answers.forEach((answer, index) => {
+      const input = document.createElement('input');
+      input.type = 'radio';
+      input.name = 'answer';
+      input.value = answer.correct;
+      input.id = `answer${index}`;
+      const label = document.createElement('label');
+      label.htmlFor = `answer${index}`;
+      label.innerText = answer.text;
+      answerForm.appendChild(input);
+      answerForm.appendChild(label);
+      answerForm.appendChild(document.createElement('br'));
+    });
+  }
+  
+  function showResult() {
+    result.innerHTML = `
+      <h2>Your Score: ${score}</h2>
+      <h3>Correct Answers:</h3>
+      <ul>${correctAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
+      <h3>Incorrect Answers:</h3>
+      <ul>${incorrectAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
+    `;
+  }
+  
