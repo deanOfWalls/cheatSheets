@@ -4,9 +4,6 @@
 1. [Java Basics](#java-basics)
 2. [Data Types and Structures](#data-types-and-structures)
 3. [Object-Oriented Programming](#object-oriented-programming)
-   - [Core Principles](#core-principles)
-   - [SOLID Principles](#solid-principles)
-   - [Static vs Instance](#static-vs-instance)
 4. [Java Features](#java-features)
 5. [Programming Principles](#programming-principles)
 6. [Java Libraries and Frameworks](#java-libraries-and-frameworks)
@@ -54,14 +51,12 @@
 <a id="object-oriented-programming"></a>
 ## Object-Oriented Programming
 
-<a id="core-principles"></a>
 ### Core Principles (🟢 Essential)
 - **Encapsulation**: Bundles data and methods that operate on that data.
 - **Inheritance**: Allows one class to inherit attributes and methods from another class.
 - **Polymorphism**: Enables a single function to handle different data types or objects.
 - **Abstraction**: Allows you to hide the complex reality while exposing only the necessary parts.
 
-<a id="solid-principles"></a>
 ### SOLID Principles (🟡 Important)
 - **Single Responsibility Principle**: A class should have only one reason to change.
 - **Open/Closed Principle**: Software entities should be open for extension but closed for modification.
@@ -69,7 +64,6 @@
 - **Interface Segregation Principle**: Clients should not be forced to depend on interfaces they do not use.
 - **Dependency Inversion Principle**: High-level modules should not depend on low-level modules; both should depend on abstractions.
 
-<a id="static-vs-instance"></a>
 ### Static vs Instance (🟢 Essential)
 - **Static Members**: Belong to the class rather than any specific instance. Accessed using the class name.
   - **Static Methods**: Can only access static members. Cannot use `this` or `super`.
