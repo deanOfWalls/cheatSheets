@@ -45,7 +45,7 @@ nextButton.addEventListener('click', () => {
         showFeedback('Correct!', 'white', true);
     } else {
         incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
-        showFeedback('Incorrect!', '#FFC107', false); // Change to a lighter shade of yellow
+        showFeedback('Incorrect!', 'orange', false); // Change background color to orange
     }
     totalAnswered++; // Increment the total answered questions
     currentQuestionIndex++;
@@ -54,12 +54,8 @@ nextButton.addEventListener('click', () => {
 
 function showFeedback(text, color, isCorrect = false) {
     previousAnswer.textContent = `Previous answer: ${text}`;
-    previousAnswer.style.color = color;
-    if (isCorrect) {
-        previousAnswer.classList.add('correct');
-    } else {
-        previousAnswer.classList.remove('correct');
-    }
+    previousAnswer.style.backgroundColor = isCorrect ? '#4CAF50' : 'orange'; // Change background color to green or orange
+    previousAnswer.style.color = 'white'; // Text color is always white
 }
 
 function showScore() {
@@ -76,7 +72,7 @@ function showNextQuestion() {
         if (answerCorrect) {
             showFeedback('Correct!', 'white', true);
         } else {
-            showFeedback('Incorrect!', '#FFC107', false); // Change to a lighter shade of yellow
+            showFeedback('Incorrect!', 'orange', false); // Change background color to orange
         }
     } else {
         previousAnswer.textContent = '';
