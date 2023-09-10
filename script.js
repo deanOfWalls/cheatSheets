@@ -1475,8 +1475,9 @@ function showResult() {
 }
 
 function finishQuiz() {
-    // Calculate the final score and display it
-    const finalScore = (score / shuffledQuestions.length) * 100;
+    // Calculate the final score based on questions answered
+    const answeredQuestions = currentQuestionIndex;
+    const finalScore = (score / answeredQuestions) * 100;
     const resultMessage = `Your Final Score: ${finalScore.toFixed(2)}%`;
     result.innerHTML = `<h2>${resultMessage}</h2>`;
 
