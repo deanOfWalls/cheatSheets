@@ -14,11 +14,20 @@ let totalAnswered = 0; // Track the total number of questions answered
 let correctAnswers = [];
 let incorrectAnswers = [];
 
+// Shuffle function using Fisher-Yates algorithm
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
 // Fetch the quiz data from the external JSON file (questions.json)
 fetch('questions.json')
     .then((response) => response.json())
     .then((data) => {
         shuffledQuestions = data;
+        shuffleArray(shuffledQuestions); // Shuffle questions
         currentQuestionIndex = 0;
         showNextQuestion();
     })
