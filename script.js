@@ -1381,6 +1381,14 @@ nextButton.addEventListener('click', () => {
     showNextQuestion();
 });
 
+// Rename the "Finish" button to "Recap"
+const recapButton = document.getElementById('finish-button');
+recapButton.textContent = 'Recap';
+
+recapButton.addEventListener('click', () => {
+    recapQuiz();
+});
+
 function showFeedback(text, color) {
     const feedback = document.getElementById('feedback');
     feedback.textContent = text;
@@ -1473,4 +1481,14 @@ function showResult() {
         <h3>Incorrect Answers:</h3>
         <ul>${incorrectAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
     `;
+}
+
+// Function to display incorrectly answered questions
+function recapQuiz() {
+    const recapContainer = document.getElementById('result');
+    recapContainer.innerHTML = '<h2>Recap of Incorrect Answers</h2>';
+    
+    incorrectAnswers.forEach((question, index) => {
+        recapContainer.innerHTML += `<p><strong>Question ${index + 1}:</strong> ${question}</p>`;
+    });
 }
