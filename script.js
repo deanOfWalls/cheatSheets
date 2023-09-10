@@ -1389,26 +1389,32 @@ recapButton.addEventListener('click', () => {
     recapQuiz();
 });
 
-// Updated showFeedback function
 function showFeedback(text, color) {
     const feedback = document.getElementById('feedback');
     feedback.textContent = text;
     feedback.style.color = color;
     feedback.style.opacity = '1'; // Set opacity to 1 (fully visible)
 
-    // Clear any existing timers
-    clearTimeout(feedbackTimer);
-
     // Delay the removal of feedback text
-    feedbackTimer = setTimeout(() => {
+    setTimeout(() => {
         feedback.style.opacity = '0'; // Set opacity to 0 (invisible)
         setTimeout(() => {
             feedback.textContent = ''; // Clear the text
         }, 1000); // Wait for 1 second for the fade-out to complete
-    }, 5000); // 5000 milliseconds (5 seconds)
+    }, 2500); // 2500 milliseconds (2.5 seconds)
 }
 
-// Updated showNextQuestion function
+startGame();
+
+function startGame() {
+    score = 0;
+    correctAnswers = [];
+    incorrectAnswers = [];
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    currentQuestionIndex = 0;
+    showNextQuestion();
+}
+
 function showNextQuestion() {
     const selectedAnswer = document.querySelector('input[name="answer"]:checked');
 
@@ -1427,19 +1433,18 @@ function showNextQuestion() {
         setTimeout(() => {
             feedbackElement.classList.add('fade-out');
         }, 2500);
+
+        // Reset the feedback timer
+        clearTimeout(feedbackTimer);
+        feedbackTimer = setTimeout(() => {
+            feedbackElement.style.opacity = '0'; // Set opacity to 0 (invisible)
+            setTimeout(() => {
+                feedbackElement.textContent = ''; // Clear the text
+            }, 1000); // Wait for 1 second for the fade-out to complete
+        }, 2500); // 2500 milliseconds (2.5 seconds)
     } else {
         document.getElementById('feedback').textContent = ''; // Clear feedback
     }
-
-    // Reset the feedback timer
-    clearTimeout(feedbackTimer);
-    feedbackTimer = setTimeout(() => {
-        const feedbackElement = document.getElementById('feedback');
-        feedbackElement.style.opacity = '0'; // Set opacity to 0 (invisible)
-        setTimeout(() => {
-            feedbackElement.textContent = ''; // Clear the text
-        }, 1000); // Wait for 1 second for the fade-out to complete
-    }, 5000); // 5000 milliseconds (5 seconds)
 
     if (currentQuestionIndex < shuffledQuestions.length) {
         showQuestion(shuffledQuestions[currentQuestionIndex]);
