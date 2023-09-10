@@ -5,13 +5,15 @@ const nextButton = document.getElementById('next-button');
 const recapButton = document.getElementById('recap-button'); // Rename to Recap button
 const result = document.getElementById('result');
 const previousAnswer = document.getElementById('previous-answer'); // Added Previous Answer element
-const scoreDisplay = document.getElementById('score-display'); // Added Score Display element
+const scoreDisplay = document.getElementById('score-display'); // Score display element
 
 let shuffledQuestions, currentQuestionIndex;
+let score = 0;
+let totalAnswered = 0; // Track the total number of questions answered
 let correctAnswers = [];
 let incorrectAnswers = [];
 
-// Fetch the quiz data from the external JavaScript file (questions.js)
+// Fetch the quiz data from the external JSON file (questions.json)
 fetch('questions.json')
     .then((response) => response.json())
     .then((data) => {
@@ -28,12 +30,15 @@ nextButton.addEventListener('click', () => {
     if (!selectedAnswer) return;
     const answerCorrect = selectedAnswer.value === 'true';
     if (answerCorrect) {
+        score++;
+        showScore();
         correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
         showFeedback('Correct!', 'green');
     } else {
         incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
         showFeedback('Incorrect!', 'red');
     }
+    totalAnswered++; // Increment the total answered questions
     currentQuestionIndex++;
     showNextQuestion();
 });
@@ -50,16 +55,19 @@ function showFeedback(text, color) {
     previousAnswer.style.color = color;
 }
 
+function showScore() {
+    const percentage = ((score / totalAnswered) * 100).toFixed(2); // Calculate score percentage
+    scoreDisplay.textContent = `Score: ${percentage}%`;
+}
+
 function showNextQuestion() {
     const selectedAnswer = document.querySelector('input[name="answer"]:checked');
 
     if (selectedAnswer) {
         const answerCorrect = selectedAnswer.value === 'true';
         if (answerCorrect) {
-            correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
             showFeedback('Correct!', 'green');
         } else {
-            incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
             showFeedback('Incorrect!', 'red');
         }
     } else {
@@ -69,28 +77,16 @@ function showNextQuestion() {
     if (currentQuestionIndex < shuffledQuestions.length) {
         showQuestion(shuffledQuestions[currentQuestionIndex]);
         questionNumber.textContent = `${currentQuestionIndex + 1}/${shuffledQuestions.length}`;
-        
-        // Calculate the score and display it
-        const totalQuestions = currentQuestionIndex;
-        const score = totalQuestions > 0 ? ((correctAnswers.length / totalQuestions) * 100).toFixed(2) : 0;
-        scoreDisplay.textContent = `Score: ${score}%`;
+        showScore();
     } else {
         showResult();
     }
-    
-    // Calculate the score and display it
-    const totalQuestions = currentQuestionIndex;
-    const score = totalQuestions > 0 ? (correctAnswers.length / totalQuestions) * 100 : 0;
-    scoreDisplay.textContent = `Score: ${score.toFixed(2)}%`;
 }
 
 function showQuestion(question) {
     questionNumber.innerText = `Question ${currentQuestionIndex + 1}`;
     questionContainer.innerText = question.question;
     answerForm.innerHTML = '';
-
-    // Resize the question container
-    questionContainer.style.height = 'fit-content';
 
     // Shuffle the answers randomly
     const shuffledAnswers = question.answers.sort(() => Math.random() - 0.5);
@@ -112,7 +108,7 @@ function showQuestion(question) {
 
 function showResult() {
     result.innerHTML = `
-        <h2>Your Score: ${scoreDisplay.textContent}</h2>
+        <h2>Your Score: ${score}</h2>
         <h3>Correct Answers:</h3>
         <ul>${correctAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
         <h3>Incorrect Answers:</h3>
@@ -125,7 +121,9 @@ function recapQuiz() {
     const recapContainer = document.getElementById('result');
     recapContainer.innerHTML = '<h2>Recap of Incorrect Answers</h2>';
     
-    incorrectAnswers.forEach((question, index) => {
+    const uniqueIncorrectAnswers = [...new Set(incorrectAnswers)]; // Remove duplicates
+    
+    uniqueIncorrectAnswers.forEach((question, index) => {
         recapContainer.innerHTML += `<p><strong>Question ${index + 1}:</strong> ${question}</p>`;
     });
 }
