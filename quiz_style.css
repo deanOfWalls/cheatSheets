@@ -79,9 +79,5 @@ body {
   border-radius: 5px; /* Rounded corners for answer box */
   font-family: 'Lexend', sans-serif;
   font-size: 20px; /* Larger font size */
-  color: white; /* White text */
-}
-/* Updated color for incorrect answers */
-.incorrect-answer {
-  color: #FF5722; /* Reddish color for incorrect answers */
+  color: #FFC107; /* Updated color for incorrect answers (lighter shade of red) */
 }
