@@ -59,9 +59,9 @@ function showFeedback(text, color, isCorrect = false) {
     previousAnswer.style.backgroundColor = isCorrect ? '#4CAF50' : 'orange'; // Change background color to green or orange
     previousAnswer.style.color = 'white'; // Text color is always white
     if (isCorrect) {
-        correctAnswerDisplay.textContent = `Correct Answer: ${correctAnswers[correctAnswers.length - 1]}`;
+        correctAnswerDisplay.textContent = ''; // Clear the correct answer display for correct answers
     } else {
-        correctAnswerDisplay.textContent = '';
+        correctAnswerDisplay.textContent = `Correct Answer: ${correctAnswers[correctAnswers.length - 1]}`;
     }
 }
 
