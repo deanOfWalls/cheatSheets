@@ -5,7 +5,8 @@ const nextButton = document.getElementById('next-button');
 const recapButton = document.getElementById('recap-button'); // Rename to Recap button
 const result = document.getElementById('result');
 const previousAnswer = document.getElementById('previous-answer'); // Added Previous Answer element
-const scoreDisplay = document.getElementById('score-display'); // Score display element
+const scoreDisplay = document.getElementById('score'); // Score display element
+const totalQuestionsDisplay = document.getElementById('total-questions'); // Total questions display element
 
 let shuffledQuestions, currentQuestionIndex;
 let score = 0;
@@ -31,9 +32,12 @@ nextButton.addEventListener('click', () => {
     const answerCorrect = selectedAnswer.value === 'true';
     if (answerCorrect) {
         score++;
+        showScore();
         correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
+        showFeedback('Correct!', 'green');
     } else {
         incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
+        showFeedback('Incorrect!', '#FFC107'); // Change to a lighter shade of yellow
     }
     totalAnswered++; // Increment the total answered questions
     currentQuestionIndex++;
@@ -47,9 +51,15 @@ recapButton.addEventListener('click', () => {
     recapQuiz();
 });
 
+function showFeedback(text, color) {
+    previousAnswer.textContent = `Previous answer: ${text}`;
+    previousAnswer.style.color = color;
+}
+
 function showScore() {
-    const percentage = ((score / totalAnswered) * 100).toFixed(2); // Calculate score percentage
-    scoreDisplay.textContent = `Score: ${percentage}%`;
+    const percentage = totalAnswered === 0 ? 0 : ((score / totalAnswered) * 100).toFixed(2); // Calculate score percentage
+    scoreDisplay.textContent = percentage + '%';
+    totalQuestionsDisplay.textContent = totalAnswered;
 }
 
 function showNextQuestion() {
@@ -60,7 +70,7 @@ function showNextQuestion() {
         if (answerCorrect) {
             showFeedback('Correct!', 'green');
         } else {
-            showFeedback('Incorrect!', '#FF9800'); // Change text color for incorrect answers
+            showFeedback('Incorrect!', '#FFC107'); // Change to a lighter shade of yellow
         }
     } else {
         previousAnswer.textContent = '';
@@ -73,11 +83,6 @@ function showNextQuestion() {
     } else {
         showResult();
     }
-}
-
-function showFeedback(text, color) {
-    previousAnswer.textContent = `Previous answer: ${text}`;
-    previousAnswer.style.color = color;
 }
 
 function showQuestion(question) {
@@ -105,7 +110,7 @@ function showQuestion(question) {
 
 function showResult() {
     result.innerHTML = `
-        <h2>Your Score: ${score}</h2>
+        <h2>Your Score: ${score}/${totalAnswered}</h2>
         <h3>Correct Answers:</h3>
         <ul>${correctAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
         <h3>Incorrect Answers:</h3>
