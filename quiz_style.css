@@ -1,10 +1,10 @@
 /* Add a new class for the button container */
 #button-container {
   text-align: center;
-  margin-top: 20px;
-  padding-top: 20px; /* Add padding at the top to separate buttons from the form */
-  margin-bottom: 20px;
-  padding-bottom: 20px; /* Add padding at the bottom to separate buttons from the result section */
+  margin-top: 0px;
+  padding-top: 0px; /* Add padding at the top to separate buttons from the form */
+  margin-bottom: 0px;
+  padding-bottom: 0px; /* Add padding at the bottom to separate buttons from the result section */
   position: relative; /* Add relative positioning to the button container */
 }
 
