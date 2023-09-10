@@ -1420,40 +1420,18 @@ function showNextQuestion() {
 
     if (selectedAnswer) {
         const answerCorrect = selectedAnswer.value === 'true';
-        const feedbackElement = document.getElementById('feedback');
         if (answerCorrect) {
-            feedbackElement.textContent = 'Correct!';
-            feedbackElement.style.color = 'green'; // Set text color to green
+            showFeedback('Correct!', 'green');
         } else {
-            feedbackElement.textContent = 'Incorrect!';
-            feedbackElement.style.color = 'red'; // Set text color to red
+            showFeedback('Incorrect!', 'red');
         }
-
-        // Add the fade-out class after a delay
-        setTimeout(() => {
-            feedbackElement.classList.add('fade-out');
-        }, 2500);
-
-        // Reset the feedback timer
-        clearTimeout(feedbackTimer);
-        feedbackTimer = setTimeout(() => {
-            feedbackElement.style.opacity = '0'; // Set opacity to 0 (invisible)
-            setTimeout(() => {
-                feedbackElement.textContent = ''; // Clear the text
-            }, 1000); // Wait for 1 second for the fade-out to complete
-        }, 2500); // 2500 milliseconds (2.5 seconds)
     } else {
-        document.getElementById('feedback').textContent = ''; // Clear feedback
+        document.getElementById('previous-answer').textContent = '';
     }
 
     if (currentQuestionIndex < shuffledQuestions.length) {
         showQuestion(shuffledQuestions[currentQuestionIndex]);
         document.getElementById('question-number').textContent = `${currentQuestionIndex + 1}/${shuffledQuestions.length}`;
-        // Calculate and display the score based on questions answered
-        const answeredQuestions = currentQuestionIndex;
-        const finalScore = (score / answeredQuestions) * 100;
-        const resultMessage = `Your Score: ${finalScore.toFixed(2)}%`;
-        result.innerHTML = `<h2>${resultMessage}</h2>`;
     } else {
         showResult();
     }
