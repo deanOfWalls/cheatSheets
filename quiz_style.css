@@ -71,7 +71,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  margin: 50px auto 10px;
+  margin: 10px auto; /* Adjusted margin */
   width: fit-content;
   background-color: rgba(0, 128, 0, 0.2); /* Light green background for correct answers */
   border: 1px solid #B0B0B0; /* Light gray border */
@@ -80,4 +80,8 @@ body {
   font-family: 'Lexend', sans-serif;
   font-size: 20px; /* Larger font size */
   color: white; /* White text */
+}
+/* Updated color for incorrect answers */
+.incorrect-answer {
+  color: #FF5722; /* Reddish color for incorrect answers */
 }
