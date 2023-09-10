@@ -1,38 +1,48 @@
-/* Updated CSS with styled buttons and an optimal color theme for learning */
+/* Buttons Container */
+#button-container {
+  text-align: center;
+  margin-top: 20px;
+  padding-bottom: 20px; /* Add padding to prevent buttons from being pushed down */
+}
 
 /* Buttons */
 .btn {
-  padding: 12px 18px; /* Slightly larger buttons */
+  padding: 12px 18px;
   margin: 10px;
   border: none;
-  background-color: #4CAF50; /* Green background */
+  background-color: #4CAF50;
   color: white;
   cursor: pointer;
-  font-family: 'Lexend', sans-serif; /* Lexend font */
-  font-size: 18px; /* Larger font size */
-  border-radius: 5px; /* Rounded corners for buttons */
-  transition: background-color 0.3s; /* Smooth background color transition */
+  font-family: 'Lexend', sans-serif;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+/* Recap button styling */
+#recap-button {
+  margin-left: 10px; /* Add margin to separate the buttons */
 }
 
 .btn:hover {
-  background-color: #45A049; /* Darker green on hover */
+  background-color: #45A049;
 }
 
 /* Page Background */
 body {
-  background-color: #E0F2F1; /* Light blue background */
-  font-family: 'Lexend', sans-serif; /* Lexend font */
-  font-size: 20px; /* Slightly larger font size */
+  background-color: #E0F2F1;
+  font-family: 'Lexend', sans-serif;
+  font-size: 20px;
 }
 
 /* Quiz Container */
 #quiz-container {
-  max-width: 700px; /* Slightly wider container */
+  max-width: 700px;
   margin: 50px auto;
   padding: 20px;
-  border: 1px solid #B0B0B0; /* Light gray border */
+  border: 1px solid #B0B0B0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: white; /* White background */
+  background-color: white;
 }
 
 /* Result Container */
@@ -43,12 +53,6 @@ body {
   border: 1px solid #B0B0B0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: white;
-}
-
-/* Button Container */
-#button-container {
-  text-align: center;
-  margin-top: 20px;
 }
 
 /* Quiz Result Label */
@@ -71,13 +75,13 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  margin: 10px auto; /* Adjusted margin */
+  margin: 10px auto;
   width: fit-content;
-  background-color: #2196F3; /* Light blue background for correct answers */
-  border: 1px solid #B0B0B0; /* Light gray border */
+  background-color: #4CAF50;
+  border: 1px solid #B0B0B0;
   padding: 5px 10px;
-  border-radius: 5px; /* Rounded corners for answer box */
+  border-radius: 5px;
   font-family: 'Lexend', sans-serif;
-  font-size: 20px; /* Larger font size */
-  color: white; /* White text */
+  font-size: 20px;
+  color: white;
 }
