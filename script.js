@@ -50,16 +50,15 @@ nextButton.addEventListener('click', () => {
     totalAnswered++; // Increment the total answered questions
     currentQuestionIndex++;
     showNextQuestion();
-    showIncorrectAnswers(); // Display incorrect answers
 });
 
 function showFeedback(text, color, isCorrect = false) {
     previousAnswer.textContent = `Previous answer: ${text}`;
     previousAnswer.style.color = color;
     if (isCorrect) {
-        previousAnswer.style.backgroundColor = '#4CAF50'; // Green background for correct answers
+        previousAnswer.classList.add('correct');
     } else {
-        previousAnswer.style.backgroundColor = '#FFC107'; // Light yellow background for incorrect answers
+        previousAnswer.classList.remove('correct');
     }
 }
 
@@ -116,13 +115,6 @@ function showQuestion(question) {
 }
 
 function showResult() {
-    result.innerHTML = '<h2>Questions Answered Incorrectly:</h2>';
-    incorrectAnswers.forEach((question, index) => {
-        result.innerHTML += `<p><strong>Question ${index + 1}:</strong> ${question}</p>`;
-    });
-}
-
-function showIncorrectAnswers() {
     result.innerHTML = '<h2>Questions Answered Incorrectly:</h2>';
     incorrectAnswers.forEach((question, index) => {
         result.innerHTML += `<p><strong>Question ${index + 1}:</strong> ${question}</p>`;
