@@ -68,16 +68,15 @@ function showNextQuestion() {
     if (currentQuestionIndex < shuffledQuestions.length) {
         showQuestion(shuffledQuestions[currentQuestionIndex]);
         questionNumber.textContent = `${currentQuestionIndex + 1}/${shuffledQuestions.length}`;
-        
-        // Display the score after each question
-        result.innerHTML = `
-            <h2>Your Score: ${score}</h2>
-        `;
     } else {
         showResult();
     }
+    
+    // Display the score after each question
+    result.innerHTML = `
+        <h2>Your Score: ${score}</h2>
+    `;
 }
-
 
 function showQuestion(question) {
     questionNumber.innerText = `Question ${currentQuestionIndex + 1}`;
