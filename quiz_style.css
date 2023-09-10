@@ -70,14 +70,15 @@ body {
   height: 50px;
 }
 
-#previous-answer {
+/* Previous Answer Text */
+#previous-answer.correct {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   margin: 10px auto;
   width: fit-content;
-  background-color: #4CAF50; /* Background color remains the same */
+  background-color: #4CAF50;
   border: 1px solid #B0B0B0;
   padding: 5px 10px;
   border-radius: 5px;

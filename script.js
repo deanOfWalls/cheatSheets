@@ -2,7 +2,6 @@ const questionNumber = document.getElementById('question-number');
 const questionContainer = document.getElementById('question');
 const answerForm = document.getElementById('answer-form');
 const nextButton = document.getElementById('next-button');
-const recapButton = document.getElementById('recap-button'); // Rename to Recap button
 const result = document.getElementById('result');
 const previousAnswer = document.getElementById('previous-answer'); // Added Previous Answer element
 const scoreDisplay = document.getElementById('score'); // Score display element
@@ -43,26 +42,24 @@ nextButton.addEventListener('click', () => {
         score++;
         showScore();
         correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
-        showFeedback('Correct!', 'green');
+        showFeedback('Correct!', 'green', true);
     } else {
         incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
-        showFeedback('Incorrect!', '#FFC107'); // Change to a lighter shade of yellow
+        showFeedback('Incorrect!', '#FFC107', false); // Change to a lighter shade of yellow
     }
     totalAnswered++; // Increment the total answered questions
     currentQuestionIndex++;
     showNextQuestion();
 });
 
-// Rename the "Finish" button to "Recap"
-recapButton.textContent = 'Recap';
-
-recapButton.addEventListener('click', () => {
-    recapQuiz();
-});
-
-function showFeedback(text, color) {
+function showFeedback(text, color, isCorrect = false) {
     previousAnswer.textContent = `Previous answer: ${text}`;
     previousAnswer.style.color = color;
+    if (isCorrect) {
+        previousAnswer.classList.add('correct');
+    } else {
+        previousAnswer.classList.remove('correct');
+    }
 }
 
 function showScore() {
@@ -77,9 +74,9 @@ function showNextQuestion() {
     if (selectedAnswer) {
         const answerCorrect = selectedAnswer.value === 'true';
         if (answerCorrect) {
-            showFeedback('Correct!', 'green');
+            showFeedback('Correct!', 'green', true);
         } else {
-            showFeedback('Incorrect!', '#FFC107'); // Change to a lighter shade of yellow
+            showFeedback('Incorrect!', '#FFC107', false); // Change to a lighter shade of yellow
         }
     } else {
         previousAnswer.textContent = '';
@@ -125,16 +122,4 @@ function showResult() {
         <h3>Incorrect Answers:</h3>
         <ul>${incorrectAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
     `;
-}
-
-// Function to display incorrectly answered questions
-function recapQuiz() {
-    const recapContainer = document.getElementById('result');
-    recapContainer.innerHTML = '<h2>Recap of Incorrect Answers</h2>';
-    
-    const uniqueIncorrectAnswers = [...new Set(incorrectAnswers)]; // Remove duplicates
-    
-    uniqueIncorrectAnswers.forEach((question, index) => {
-        recapContainer.innerHTML += `<p><strong>Question ${index + 1}:</strong> ${question}</p>`;
-    });
 }
