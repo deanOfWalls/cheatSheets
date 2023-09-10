@@ -1,10 +1,20 @@
-/* Buttons Container */
+/* Add a new class for the button container */
 #button-container {
   text-align: center;
   margin-top: 20px;
   padding-top: 20px; /* Add padding at the top to separate buttons from the form */
   margin-bottom: 20px;
   padding-bottom: 20px; /* Add padding at the bottom to separate buttons from the result section */
+  position: relative; /* Add relative positioning to the button container */
+}
+
+/* Add a new class for the "Next" button */
+#next-button-container {
+  position: absolute;
+  bottom: 0; /* Anchor it to the bottom of the quiz container */
+  left: 0;
+  right: 0;
+  padding: 20px; /* Add padding to separate the button from the content above */
 }
 
 /* Quiz Container */
@@ -18,8 +28,6 @@
   min-height: 500px; /* Set a fixed minimum height in pixels */
   overflow: hidden; /* Hide overflow if needed */
 }
-
-
 
 
 /* Result Container */
