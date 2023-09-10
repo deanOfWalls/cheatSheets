@@ -39,3 +39,10 @@
     margin-bottom: 20px; /* Adjust the margin as needed */
   }
   
+  #feedback-container {
+    text-align: center;
+  }
+  
+  #feedback {
+    margin-bottom: 10px;
+  }
