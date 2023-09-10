@@ -1395,7 +1395,24 @@ nextButton.addEventListener('click', () => {
     if (currentQuestionIndex < shuffledQuestions.length) {
       showQuestion(shuffledQuestions[currentQuestionIndex]);
       document.getElementById('question-number').textContent = `${currentQuestionIndex + 1}/${shuffledQuestions.length}`;
-      document.getElementById('feedback').textContent = ''; // Clear feedback
+      
+      // Check if the previous question was answered correctly and display feedback
+      const feedback = document.getElementById('feedback');
+      feedback.textContent = '';
+      if (currentQuestionIndex > 0) {
+        const prevQuestion = shuffledQuestions[currentQuestionIndex - 1];
+        const prevAnswer = prevQuestion.answers.find(answer => answer.correct);
+        const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+        
+        if (prevAnswer && selectedAnswer) {
+          const answerCorrect = selectedAnswer.value === 'true';
+          if (answerCorrect) {
+            feedback.textContent = 'Correct!';
+          } else {
+            feedback.textContent = 'Incorrect!';
+          }
+        }
+      }
     } else {
       showResult();
     }
