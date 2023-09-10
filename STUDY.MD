@@ -1,5 +1,7 @@
 # Java Study Guide for Entry-Level Software Developer Interviews
 
+### [Click here to take a comprehensive quiz](http://quiz.deanwalls.com)
+
 ## Table of Contents
 1. [Java Basics](#java-basics)
 2. [Data Types and Structures](#data-types-and-structures)
