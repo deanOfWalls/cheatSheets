@@ -167,7 +167,7 @@ body {
 
 /* Style every other answer choice */
 #question-answers-container label:nth-child(even) {
-  background-color: #D1E9E8; /* Use a color that matches the theme and improves readability */
+  background-color: #d1e9e886; /* Use a color that matches the theme and improves readability */
 }
 
 /* Style the remaining answer choices */
