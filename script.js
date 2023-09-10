@@ -18,7 +18,7 @@ fetch('quiz-data.txt')
         // Parse the text data to extract questions and answers
         shuffledQuestions = parseQuizData(data);
         currentQuestionIndex = 0;
-        showNextQuestion();
+        showNextQuestion(); // Move this call here
     })
     .catch((error) => {
         console.error('Error loading quiz data:', error);
