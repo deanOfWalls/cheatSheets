@@ -7,7 +7,7 @@
   padding-bottom: 20px; /* Add padding at the bottom to separate buttons from the result section */
 }
 
-/* Set a fixed height for the container to prevent resizing */
+/* Quiz Container */
 #quiz-container {
   max-width: 700px;
   margin: 50px auto;
@@ -15,7 +15,10 @@
   border: 1px solid #B0B0B0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: white;
+  height: auto; /* Set the height to auto to allow content to expand */
+  overflow: hidden; /* Hide overflow if needed */
 }
+
 
 /* Result Container */
 #result {
