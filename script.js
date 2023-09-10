@@ -2,6 +2,7 @@ const questionNumber = document.getElementById('question-number');
 const questionContainer = document.getElementById('question');
 const answerForm = document.getElementById('answer-form');
 const nextButton = document.getElementById('next-button');
+const finishButton = document.getElementById('finish-button'); // Added Finish button
 const result = document.getElementById('result');
 
 let shuffledQuestions, currentQuestionIndex;
@@ -1369,18 +1370,22 @@ nextButton.addEventListener('click', () => {
     if (!selectedAnswer) return;
     const answerCorrect = selectedAnswer.value === 'true';
     if (answerCorrect) {
-      score++;
-      correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
-      showFeedback('Correct!', 'green');
+        score++;
+        correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
+        showFeedback('Correct!', 'green');
     } else {
-      incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
-      showFeedback('Incorrect!', 'red');
+        incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
+        showFeedback('Incorrect!', 'red');
     }
     currentQuestionIndex++;
     showNextQuestion();
-  });
+});
 
-  function showFeedback(text, color) {
+finishButton.addEventListener('click', () => {
+    finishQuiz();
+});
+
+function showFeedback(text, color) {
     const feedback = document.getElementById('feedback');
     feedback.textContent = text;
     feedback.style.color = color;
@@ -1395,7 +1400,6 @@ nextButton.addEventListener('click', () => {
     }, 5000); // 5000 milliseconds (5 seconds)
 }
 
-
 startGame();
 
 function startGame() {
@@ -1409,39 +1413,35 @@ function startGame() {
 
 function showNextQuestion() {
     const selectedAnswer = document.querySelector('input[name="answer"]:checked');
-  
-    if (selectedAnswer) {
-      const answerCorrect = selectedAnswer.value === 'true';
-      const feedbackElement = document.getElementById('feedback');
-      if (answerCorrect) {
-        feedbackElement.textContent = 'Correct!';
-        feedbackElement.style.color = 'green'; // Set text color to green
-      } else {
-        feedbackElement.textContent = 'Incorrect!';
-        feedbackElement.style.color = 'red'; // Set text color to red
-      }
-  
-      // Add the fade-out class after a delay
-      setTimeout(() => {
-        feedbackElement.classList.add('fade-out');
-      }, 2500);
-    } else {
-      document.getElementById('feedback').textContent = ''; // Clear feedback
-    }
-  
-    if (currentQuestionIndex < shuffledQuestions.length) {
-      showQuestion(shuffledQuestions[currentQuestionIndex]);
-      document.getElementById('question-number').textContent = `${currentQuestionIndex + 1}/${shuffledQuestions.length}`;
-    } else {
-      showResult();
-    }
-  }
-  
-  
-  
-  
 
-  function showQuestion(question) {
+    if (selectedAnswer) {
+        const answerCorrect = selectedAnswer.value === 'true';
+        const feedbackElement = document.getElementById('feedback');
+        if (answerCorrect) {
+            feedbackElement.textContent = 'Correct!';
+            feedbackElement.style.color = 'green'; // Set text color to green
+        } else {
+            feedbackElement.textContent = 'Incorrect!';
+            feedbackElement.style.color = 'red'; // Set text color to red
+        }
+
+        // Add the fade-out class after a delay
+        setTimeout(() => {
+            feedbackElement.classList.add('fade-out');
+        }, 2500);
+    } else {
+        document.getElementById('feedback').textContent = ''; // Clear feedback
+    }
+
+    if (currentQuestionIndex < shuffledQuestions.length) {
+        showQuestion(shuffledQuestions[currentQuestionIndex]);
+        document.getElementById('question-number').textContent = `${currentQuestionIndex + 1}/${shuffledQuestions.length}`;
+    } else {
+        showResult();
+    }
+}
+
+function showQuestion(question) {
     questionNumber.innerText = `Question ${currentQuestionIndex + 1}`;
     questionContainer.innerText = question.question;
     answerForm.innerHTML = '';
@@ -1464,13 +1464,12 @@ function showNextQuestion() {
     });
 }
 
-
 function showResult() {
     result.innerHTML = `
-      <h2>Your Score: ${score}</h2>
-      <h3>Correct Answers:</h3>
-      <ul>${correctAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
-      <h3>Incorrect Answers:</h3>
-      <ul>${incorrectAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
+        <h2>Your Score: ${score}</h2>
+        <h3>Correct Answers:</h3>
+        <ul>${correctAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
+        <h3>Incorrect Answers:</h3>
+        <ul>${incorrectAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
     `;
 }
