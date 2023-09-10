@@ -20,17 +20,21 @@ function shuffleArray(array) {
   }
 }
 
-fetch('questions.json')
-  .then((response) => response.json())
-  .then((data) => {
-    shuffledQuestions = data;
-    shuffleArray(shuffledQuestions);
-    currentQuestionIndex = 0;
-    showNextQuestion();
-  })
-  .catch((error) => {
-    console.error('Error loading quiz data:', error);
-  });
+function fetchQuizData() {
+  return fetch('questions.json')
+    .then((response) => response.json())
+    .then((data) => {
+      shuffledQuestions = data;
+      shuffleArray(shuffledQuestions);
+      currentQuestionIndex = 0;
+      showNextQuestion();
+    })
+    .catch((error) => {
+      console.error('Error loading quiz data:', error);
+    });
+}
+
+fetchQuizData();
 
 nextButton.addEventListener('click', () => {
   const selectedAnswer = document.querySelector('input[name="answer"]:checked');
