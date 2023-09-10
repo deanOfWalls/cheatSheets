@@ -11,8 +11,8 @@ let score = 0;
 let correctAnswers = [];
 let incorrectAnswers = [];
 
-// Fetch the quiz data from the external JSON file (questions.json)
-fetch('questions.json')
+// Fetch the quiz data from the external JavaScript file (questions.js)
+fetch('questions.js')
     .then((response) => response.json())
     .then((data) => {
         shuffledQuestions = data;
