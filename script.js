@@ -2,7 +2,7 @@ const questionNumber = document.getElementById('question-number');
 const questionContainer = document.getElementById('question');
 const answerForm = document.getElementById('answer-form');
 const nextButton = document.getElementById('next-button');
-const recapButton = document.getElementById('finish-button'); // Rename to Recap button
+const recapButton = document.getElementById('recap-button'); // Rename to Recap button
 const result = document.getElementById('result');
 const previousAnswer = document.getElementById('previous-answer'); // Added Previous Answer element
 
@@ -11,39 +11,17 @@ let score = 0;
 let correctAnswers = [];
 let incorrectAnswers = [];
 
-// Fetch the quiz data from the external text file (quiz-data.txt)
-fetch('quiz-data.txt')
-    .then((response) => response.text())
+// Fetch the quiz data from the external JSON file (questions.json)
+fetch('questions.json')
+    .then((response) => response.json())
     .then((data) => {
-        // Parse the text data to extract questions and answers
-        shuffledQuestions = parseQuizData(data);
+        shuffledQuestions = data;
         currentQuestionIndex = 0;
-        showNextQuestion(); // Move this call here
+        showNextQuestion();
     })
     .catch((error) => {
         console.error('Error loading quiz data:', error);
     });
-
-// Function to parse quiz data from the text
-function parseQuizData(data) {
-    const lines = data.split('\n');
-    const questions = [];
-
-    for (let i = 0; i < lines.length; i += 6) {
-        const question = lines[i].trim();
-        const answers = [];
-
-        for (let j = i + 1; j < i + 5; j++) {
-            const answerText = lines[j].trim();
-            const isCorrect = lines[j + 1].trim() === 'true'; // Check if the answer is correct
-            answers.push({ text: answerText, correct: isCorrect });
-        }
-
-        questions.push({ question, answers });
-    }
-
-    return questions;
-}
 
 nextButton.addEventListener('click', () => {
     const selectedAnswer = document.querySelector('input[name="answer"]:checked');
