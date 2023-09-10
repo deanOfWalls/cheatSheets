@@ -29,7 +29,6 @@
   overflow: hidden; /* Hide overflow if needed */
 }
 
-
 /* Result Container */
 #result {
   max-width: 700px;
@@ -156,4 +155,27 @@ body {
 /* Recap button styling */
 #recap-button {
   margin-left: 10px;
+}
+
+/* Add padding between lines of text in the body */
+body {
+  background-color: #E0F2F1;
+  font-family: 'Lexend', sans-serif;
+  font-size: 20px;
+  line-height: 1.6; /* Add padding between lines of text within the body */
+}
+
+/* Style every other answer choice */
+#question-answers-container label:nth-child(even) {
+  background-color: #D1E9E8; /* Use a color that matches the theme and improves readability */
+}
+
+/* Style the remaining answer choices */
+#question-answers-container label:nth-child(odd) {
+  background-color: #f3f5dd; /* Use a different color for better readability */
+}
+
+/* Style the default questions with a different background color */
+#question-answers-container label.default {
+  background-color: #FFD3D3; /* Use a different color for default questions */
 }
