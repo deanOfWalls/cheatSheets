@@ -8,8 +8,59 @@
 }
 
 /* Set a fixed height for the container to prevent resizing */
-#score-container {
-  height: 80px; /* Adjust the height as needed */
+#quiz-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #B0B0B0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+/* Result Container */
+#result {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #B0B0B0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+/* Quiz Result Label */
+#result h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Feedback Container */
+#feedback-container {
+  text-align: center;
+  position: relative;
+  height: 50px;
+}
+
+/* Previous Answer Text */
+#previous-answer.correct {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 10px auto;
+  width: fit-content;
+  background-color: #4CAF50;
+  border: 1px solid #B0B0B0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: 'Lexend', sans-serif;
+  font-size: 20px;
+  color: white; /* Text color changed to white */
+}
+
+/* Recap button styling */
+#recap-button {
+  margin-left: 10px;
 }
 
 /* Buttons */
