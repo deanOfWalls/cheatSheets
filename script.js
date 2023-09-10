@@ -117,3 +117,4 @@ function showResult() {
         result.innerHTML += `<p><strong>Question ${index + 1}:</strong> ${question}</p>`;
     });
 }
+
