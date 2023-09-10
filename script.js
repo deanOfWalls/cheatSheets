@@ -6,6 +6,7 @@ const result = document.getElementById('result');
 const previousAnswer = document.getElementById('previous-answer'); // Added Previous Answer element
 const scoreDisplay = document.getElementById('score'); // Score display element
 const totalQuestionsDisplay = document.getElementById('total-questions'); // Total questions display element
+const correctAnswerDisplay = document.getElementById('correct-answer'); // Added Correct Answer element
 
 let shuffledQuestions, currentQuestionIndex;
 let score = 0;
@@ -57,6 +58,11 @@ function showFeedback(text, color, isCorrect = false) {
     previousAnswer.textContent = `Previous answer: ${text}`;
     previousAnswer.style.backgroundColor = isCorrect ? '#4CAF50' : 'orange'; // Change background color to green or orange
     previousAnswer.style.color = 'white'; // Text color is always white
+    if (isCorrect) {
+        correctAnswerDisplay.textContent = `Correct Answer: ${correctAnswers[correctAnswers.length - 1]}`;
+    } else {
+        correctAnswerDisplay.textContent = '';
+    }
 }
 
 function showScore() {
@@ -77,6 +83,7 @@ function showNextQuestion() {
         }
     } else {
         previousAnswer.textContent = '';
+        correctAnswerDisplay.textContent = '';
     }
 
     if (currentQuestionIndex < shuffledQuestions.length) {
@@ -117,4 +124,3 @@ function showResult() {
         result.innerHTML += `<p><strong>Question ${index + 1}:</strong> ${question}</p>`;
     });
 }
-
