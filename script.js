@@ -61,7 +61,9 @@ function showFeedback(text, color, isCorrect = false) {
     if (isCorrect) {
         correctAnswerDisplay.textContent = ''; // Clear the correct answer display for correct answers
     } else {
-        correctAnswerDisplay.textContent = `Correct Answer: ${correctAnswers[correctAnswers.length - 1]}`;
+        const currentQuestion = shuffledQuestions[currentQuestionIndex];
+        const correctAnswer = currentQuestion.answers.find(answer => answer.correct);
+        correctAnswerDisplay.textContent = `Correct Answer: ${correctAnswer.text}`;
     }
 }
 
