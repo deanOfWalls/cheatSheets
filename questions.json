@@ -1325,7 +1325,7 @@
     {
         "question": "What is Content Delivery Network (CDN)?",
         "answers": [
-            { "text": "A distributed network of servers that delivers web content, such as "text", images, and videos, to users based on their geographic location", "correct": true },
+            { "text": "A distributed network of servers that delivers web content, such as \"text\", images, and videos, to users based on their geographic location", "correct": true },
             { "text": "A database management system", "correct": false },
             { "text": "A programming language", "correct": false },
             { "text": "A web server software", "correct": false }
