@@ -1393,14 +1393,6 @@ function showFeedback(text, color) {
     const feedback = document.getElementById('previous-answer');
     feedback.textContent = `Previous answer: ${text}`;
     feedback.style.color = color;
-
-    // Delay the removal of feedback text
-    setTimeout(() => {
-        feedback.style.opacity = '0'; // Set opacity to 0 (invisible)
-        setTimeout(() => {
-            feedback.textContent = ''; // Clear the text
-        }, 1000); // Wait for 1 second for the fade-out to complete
-    }, 2500); // 2500 milliseconds (2.5 seconds)
 }
 
 startGame();
@@ -1479,5 +1471,3 @@ function recapQuiz() {
     });
 }
 
-// Timer for feedback message
-let feedbackTimer;
