@@ -2,7 +2,8 @@
 #button-container {
   text-align: center;
   margin-top: 20px;
-  padding-bottom: 20px; /* Add padding to prevent buttons from being pushed down */
+  margin-bottom: 20px; /* Add margin at the bottom to push buttons down */
+  padding-bottom: 20px; /* Add padding at the bottom to separate buttons */
 }
 
 /* Buttons */
@@ -21,7 +22,7 @@
 
 /* Recap button styling */
 #recap-button {
-  margin-left: 10px; /* Add margin to separate the buttons */
+  margin-left: 10px;
 }
 
 .btn:hover {
@@ -69,7 +70,6 @@ body {
   height: 50px;
 }
 
-/* Previous Answer Text */
 #previous-answer {
   position: absolute;
   top: 0;
@@ -77,11 +77,11 @@ body {
   right: 0;
   margin: 10px auto;
   width: fit-content;
-  background-color: #4CAF50;
+  background-color: #4CAF50; /* Background color remains the same */
   border: 1px solid #B0B0B0;
   padding: 5px 10px;
   border-radius: 5px;
   font-family: 'Lexend', sans-serif;
   font-size: 20px;
-  color: white;
+  color: white; /* Text color changed to white */
 }
