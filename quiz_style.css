@@ -2,8 +2,9 @@
 #button-container {
   text-align: center;
   margin-top: 20px;
-  margin-bottom: 20px; /* Add margin at the bottom to push buttons down */
-  padding-bottom: 20px; /* Add padding at the bottom to separate buttons */
+  padding-top: 20px; /* Add padding at the top to separate buttons from the form */
+  margin-bottom: 20px;
+  padding-bottom: 20px; /* Add padding at the bottom to separate buttons from the result section */
 }
 
 /* Buttons */
