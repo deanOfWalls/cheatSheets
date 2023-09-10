@@ -1392,30 +1392,27 @@ function startGame() {
 }
 
 function showNextQuestion() {
+    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+  
+    if (selectedAnswer) {
+      const answerCorrect = selectedAnswer.value === 'true';
+      if (answerCorrect) {
+        document.getElementById('feedback').textContent = 'Correct!';
+      } else {
+        document.getElementById('feedback').textContent = 'Incorrect!';
+      }
+    } else {
+      document.getElementById('feedback').textContent = ''; // Clear feedback
+    }
+  
     if (currentQuestionIndex < shuffledQuestions.length) {
       showQuestion(shuffledQuestions[currentQuestionIndex]);
       document.getElementById('question-number').textContent = `${currentQuestionIndex + 1}/${shuffledQuestions.length}`;
-      
-      // Check if the previous question was answered correctly and display feedback
-      const feedback = document.getElementById('feedback');
-      feedback.textContent = '';
-      if (currentQuestionIndex > 0) {
-        const prevQuestion = shuffledQuestions[currentQuestionIndex - 1];
-        const selectedAnswer = document.querySelector('input[name="answer"]:checked');
-        
-        if (selectedAnswer) {
-          const answerCorrect = selectedAnswer.value === 'true';
-          if (answerCorrect) {
-            feedback.textContent = 'Correct!';
-          } else {
-            feedback.textContent = 'Incorrect!';
-          }
-        }
-      }
     } else {
       showResult();
     }
   }
+  
   
 
 function showQuestion(question) {
