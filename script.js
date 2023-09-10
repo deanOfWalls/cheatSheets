@@ -31,14 +31,11 @@ nextButton.addEventListener('click', () => {
     const answerCorrect = selectedAnswer.value === 'true';
     if (answerCorrect) {
         score++;
-        totalAnswered++; // Increment the total answered questions
-        showScore();
         correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
-        showFeedback('Correct!', 'green');
     } else {
         incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
-        showFeedback('Incorrect!', 'red');
     }
+    totalAnswered++; // Increment the total answered questions
     currentQuestionIndex++;
     showNextQuestion();
 });
@@ -50,18 +47,9 @@ recapButton.addEventListener('click', () => {
     recapQuiz();
 });
 
-function showFeedback(text, color) {
-    previousAnswer.textContent = `Previous answer: ${text}`;
-    previousAnswer.style.color = color;
-}
-
 function showScore() {
-    if (totalAnswered === 0) {
-        scoreDisplay.textContent = `Score: 0%`; // To avoid division by zero
-    } else {
-        const percentage = ((score / totalAnswered) * 100).toFixed(2); // Calculate score percentage
-        scoreDisplay.textContent = `Score: ${percentage}%`;
-    }
+    const percentage = ((score / totalAnswered) * 100).toFixed(2); // Calculate score percentage
+    scoreDisplay.textContent = `Score: ${percentage}%`;
 }
 
 function showNextQuestion() {
@@ -72,7 +60,7 @@ function showNextQuestion() {
         if (answerCorrect) {
             showFeedback('Correct!', 'green');
         } else {
-            showFeedback('Incorrect!', 'red');
+            showFeedback('Incorrect!', '#FF9800'); // Change text color for incorrect answers
         }
     } else {
         previousAnswer.textContent = '';
@@ -85,6 +73,11 @@ function showNextQuestion() {
     } else {
         showResult();
     }
+}
+
+function showFeedback(text, color) {
+    previousAnswer.textContent = `Previous answer: ${text}`;
+    previousAnswer.style.color = color;
 }
 
 function showQuestion(question) {
