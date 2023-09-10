@@ -25,23 +25,26 @@ fetch('questions.json')
         console.error('Error loading quiz data:', error);
     });
 
-nextButton.addEventListener('click', () => {
-    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
-    if (!selectedAnswer) return;
-    const answerCorrect = selectedAnswer.value === 'true';
-    if (answerCorrect) {
-        score++;
-        showScore();
-        correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
-        showFeedback('Correct!', 'green');
-    } else {
-        incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
-        showFeedback('Incorrect!', 'red');
-    }
-    totalAnswered++; // Increment the total answered questions
-    currentQuestionIndex++;
-    showNextQuestion();
-});
+    nextButton.addEventListener('click', () => {
+        const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+        if (!selectedAnswer) return;
+    
+        const answerCorrect = selectedAnswer.value === 'true' || selectedAnswer.value === true; // Compare as boolean
+    
+        if (answerCorrect) {
+            score++;
+            showScore();
+            correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
+            showFeedback('Correct!', 'green');
+        } else {
+            incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
+            showFeedback('Incorrect!', 'red');
+        }
+        totalAnswered++; // Increment the total answered questions
+        currentQuestionIndex++;
+        showNextQuestion();
+    });
+    
 
 // Rename the "Finish" button to "Recap"
 recapButton.textContent = 'Recap';
