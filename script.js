@@ -1404,8 +1404,10 @@ function showNextQuestion() {
         feedbackElement.textContent = 'Incorrect!';
         feedbackElement.style.color = 'red'; // Set text color to red
       }
+  
+      // Add the fade-out class after a delay
       setTimeout(() => {
-        feedbackElement.textContent = ''; // Clear feedback after 5 seconds
+        feedbackElement.classList.add('fade-out');
       }, 5000);
     } else {
       document.getElementById('feedback').textContent = ''; // Clear feedback
@@ -1418,6 +1420,7 @@ function showNextQuestion() {
       showResult();
     }
   }
+  
   
   
   
