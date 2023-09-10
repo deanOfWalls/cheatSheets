@@ -1433,6 +1433,15 @@ function showNextQuestion() {
         setTimeout(() => {
             feedbackElement.classList.add('fade-out');
         }, 2500);
+
+        // Reset the feedback timer
+        clearTimeout(feedbackTimer);
+        feedbackTimer = setTimeout(() => {
+            feedbackElement.style.opacity = '0'; // Set opacity to 0 (invisible)
+            setTimeout(() => {
+                feedbackElement.textContent = ''; // Clear the text
+            }, 1000); // Wait for 1 second for the fade-out to complete
+        }, 5000); // 5000 milliseconds (5 seconds)
     } else {
         document.getElementById('feedback').textContent = ''; // Clear feedback
     }
@@ -1492,3 +1501,6 @@ function recapQuiz() {
         recapContainer.innerHTML += `<p><strong>Question ${index + 1}:</strong> ${question}</p>`;
     });
 }
+
+// Timer for feedback message
+let feedbackTimer;
