@@ -1396,11 +1396,17 @@ function showNextQuestion() {
   
     if (selectedAnswer) {
       const answerCorrect = selectedAnswer.value === 'true';
+      const feedbackElement = document.getElementById('feedback');
       if (answerCorrect) {
-        document.getElementById('feedback').textContent = 'Correct!';
+        feedbackElement.textContent = 'Correct!';
+        feedbackElement.style.color = 'green'; // Set text color to green
       } else {
-        document.getElementById('feedback').textContent = 'Incorrect!';
+        feedbackElement.textContent = 'Incorrect!';
+        feedbackElement.style.color = 'red'; // Set text color to red
       }
+      setTimeout(() => {
+        feedbackElement.textContent = ''; // Clear feedback after 5 seconds
+      }, 5000);
     } else {
       document.getElementById('feedback').textContent = ''; // Clear feedback
     }
@@ -1412,6 +1418,7 @@ function showNextQuestion() {
       showResult();
     }
   }
+  
   
   
 
