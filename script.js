@@ -1473,3 +1473,14 @@ function showResult() {
         <ul>${incorrectAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
     `;
 }
+
+function finishQuiz() {
+    // Calculate the final score and display it
+    const finalScore = (score / shuffledQuestions.length) * 100;
+    const resultMessage = `Your Final Score: ${finalScore.toFixed(2)}%`;
+    result.innerHTML = `<h2>${resultMessage}</h2>`;
+
+    // Hide the "Finish" and "Next" buttons
+    finishButton.style.display = 'none';
+    nextButton.style.display = 'none';
+}
