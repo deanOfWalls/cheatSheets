@@ -45,7 +45,7 @@ nextButton.addEventListener('click', () => {
         showFeedback('Correct!', 'white', true);
     } else {
         incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
-        showFeedback('Incorrect!', '#FFC107', false); // Change to a lighter shade of yellow
+        showFeedback('Incorrect!', 'black', false); // Change text color to black
     }
     totalAnswered++; // Increment the total answered questions
     currentQuestionIndex++;
@@ -77,7 +77,7 @@ function showNextQuestion() {
         if (answerCorrect) {
             showFeedback('Correct!', 'white', true);
         } else {
-            showFeedback('Incorrect!', '#FFC107', false); // Change to a lighter shade of yellow
+            showFeedback('Incorrect!', 'black', false); // Change text color to black
         }
     } else {
         previousAnswer.textContent = '';
@@ -117,9 +117,7 @@ function showQuestion(question) {
 
 function showResult() {
     result.innerHTML = '<h2>Questions Answered Incorrectly:</h2>';
-    incorrectAnswers.forEach((question, index) => {
-        result.innerHTML += `<p><strong>Question ${index + 1}:</strong> ${question}</p>`;
-    });
+    showIncorrectAnswers(); // Display incorrect answers
 }
 
 function showIncorrectAnswers() {
