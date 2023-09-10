@@ -35,7 +35,7 @@ function parseQuizData(data) {
 
         for (let j = i + 1; j < i + 5; j++) {
             const answerText = lines[j].trim();
-            const isCorrect = j === i + 1 ? 'true' : 'false';
+            const isCorrect = lines[j + 1].trim() === 'true'; // Check if the answer is correct
             answers.push({ text: answerText, correct: isCorrect });
         }
 
