@@ -20,11 +20,6 @@
   transition: background-color 0.3s;
 }
 
-/* Recap button styling */
-#recap-button {
-  margin-left: 10px;
-}
-
 .btn:hover {
   background-color: #45A049;
 }
@@ -85,4 +80,9 @@ body {
   font-family: 'Lexend', sans-serif;
   font-size: 20px;
   color: white; /* Text color changed to white */
+}
+
+/* Recap button styling */
+#recap-button {
+  margin-left: 10px;
 }
