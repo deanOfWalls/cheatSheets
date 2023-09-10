@@ -1365,7 +1365,7 @@ const questions = [
 
 
 nextButton.addEventListener('click', () => {
-    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+    const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
     if (!selectedAnswer) return;
     const answerCorrect = selectedAnswer.value === 'true';
     if (answerCorrect) {
