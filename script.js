@@ -42,7 +42,7 @@ nextButton.addEventListener('click', () => {
         score++;
         showScore();
         correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
-        showFeedback('Correct!', 'green', true);
+        showFeedback('Correct!', 'white', true);
     } else {
         incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
         showFeedback('Incorrect!', '#FFC107', false); // Change to a lighter shade of yellow
@@ -74,7 +74,7 @@ function showNextQuestion() {
     if (selectedAnswer) {
         const answerCorrect = selectedAnswer.value === 'true';
         if (answerCorrect) {
-            showFeedback('Correct!', 'green', true);
+            showFeedback('Correct!', 'white', true);
         } else {
             showFeedback('Incorrect!', '#FFC107', false); // Change to a lighter shade of yellow
         }
@@ -115,11 +115,8 @@ function showQuestion(question) {
 }
 
 function showResult() {
-    result.innerHTML = `
-        <h2>Your Score: ${score}/${totalAnswered}</h2>
-        <h3>Correct Answers:</h3>
-        <ul>${correctAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
-        <h3>Incorrect Answers:</h3>
-        <ul>${incorrectAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
-    `;
+    result.innerHTML = '<h2>Questions Answered Incorrectly:</h2>';
+    incorrectAnswers.forEach((question, index) => {
+        result.innerHTML += `<p><strong>Question ${index + 1}:</strong> ${question}</p>`;
+    });
 }
