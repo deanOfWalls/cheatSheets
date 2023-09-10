@@ -3,35 +3,35 @@
         "question": "What is an algorithm?",
         "answers": [
             { "text": "A set of rules to solve a problem", "correct": true },
-            { "text": "A data storage mechanism", "correct": false },
+            { "text": "A method of data organization", "correct": false },
             { "text": "A type of software bug", "correct": false },
-            { "text": "A programming language", "correct": false }
+            { "text": "A programming language feature", "correct": false }
         ]
     },
     {
         "question": "What is a data structure?",
         "answers": [
             { "text": "A way to organize and store data", "correct": true },
-            { "text": "A debugging tool", "correct": false },
+            { "text": "A debugging technique", "correct": false },
             { "text": "A type of algorithm", "correct": false },
-            { "text": "A software development methodology", "correct": false }
+            { "text": "A software development process", "correct": false }
         ]
     },
     {
         "question": "What is Object-Oriented Programming (OOP)?",
         "answers": [
             { "text": "A programming paradigm based on objects", "correct": true },
-            { "text": "A way to create infinite loops", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A type of database", "correct": false }
+            { "text": "A way to create loops", "correct": false },
+            { "text": "A debugging concept", "correct": false },
+            { "text": "A type of database system", "correct": false }
         ]
     },
     {
         "question": "What is Functional Programming?",
         "answers": [
-            { "text": "A programming paradigm that treats computation as the evaluation of mathematical functions", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
+            { "text": "A programming paradigm that uses mathematical functions", "correct": true },
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging approach", "correct": false },
             { "text": "A programming paradigm based on objects", "correct": false }
         ]
     },
@@ -39,17 +39,17 @@
         "question": "What is Procedural Programming?",
         "answers": [
             { "text": "A programming paradigm based on procedure calls", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm that treats computation as the evaluation of mathematical functions", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging technique", "correct": false },
+            { "text": "A mathematical computation paradigm", "correct": false }
         ]
     },
     {
         "question": "What is a compiler?",
         "answers": [
             { "text": "A tool that translates source code into machine code", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
             { "text": "A programming paradigm based on objects", "correct": false }
         ]
     },
@@ -57,8 +57,8 @@
         "question": "What is an interpreter?",
         "answers": [
             { "text": "A tool that executes source code line by line", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging technique", "correct": false },
             { "text": "A programming paradigm based on objects", "correct": false }
         ]
     },
@@ -66,297 +66,297 @@
         "question": "What is a class?",
         "answers": [
             { "text": "A blueprint for creating objects", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging concept", "correct": false },
+            { "text": "A procedural programming feature", "correct": false }
         ]
     },
     {
         "question": "What is an object?",
         "answers": [
             { "text": "An instance of a class", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging technique", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is a method?",
         "answers": [
             { "text": "A function associated with an object", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging approach", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is a constructor?",
         "answers": [
             { "text": "A special method for creating and initializing objects", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is a destructor?",
         "answers": [
             { "text": "A method that is automatically invoked when an object is destroyed", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging approach", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is inheritance?",
         "answers": [
             { "text": "The mechanism by which one class can inherit attributes and methods from another class", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is polymorphism?",
         "answers": [
             { "text": "The ability of different objects to be treated as objects of a common superclass", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging approach", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is encapsulation?",
         "answers": [
             { "text": "The bundling of data and methods that operate on that data within a single unit", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is abstraction?",
         "answers": [
             { "text": "The process of hiding the implementation details and showing only the essential features", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging approach", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is a namespace?",
         "answers": [
             { "text": "A container that holds a set of identifiers and allows the disambiguation of homonym identifiers residing in different namespaces", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is a library?",
         "answers": [
             { "text": "A collection of pre-compiled routines that a program can use", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging approach", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is an API?",
         "answers": [
             { "text": "Application Programming Interface, a set of rules for building and interacting with software applications", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is a framework?",
         "answers": [
             { "text": "A pre-written code library that provides a foundation to build and deploy applications", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is a software development life cycle (SDLC)?",
         "answers": [
-            { "text": "A process used by software industry to design, develop and test high-quality software", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A process used by the software industry to design, develop, and test high-quality software", "correct": true },
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging approach", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is version control?",
         "answers": [
             { "text": "A system that records changes to a file or set of files over time", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is debugging?",
         "answers": [
             { "text": "The process of finding and fixing errors in a program", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A set of rules for building software", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A set of principles for building software", "correct": false },
+            { "text": "A procedural programming approach", "correct": false }
         ]
     },
     {
         "question": "What is unit testing?",
         "answers": [
             { "text": "Testing individual units or components of a software", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is integration testing?",
         "answers": [
-            { "text": "Testing of individual software modules combined as a group", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "Testing individual software modules combined as a group", "correct": true },
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is system testing?",
         "answers": [
             { "text": "Testing the system as a whole", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming approach", "correct": false }
         ]
     },
     {
         "question": "What is Big O notation?",
         "answers": [
             { "text": "A notation to describe the performance or complexity of an algorithm", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is recursion?",
         "answers": [
             { "text": "A technique where a function calls itself", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is a loop?",
         "answers": [
             { "text": "A control flow statement for performing repetitive tasks", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is conditional branching?",
         "answers": [
             { "text": "A control flow statement that allows code to be executed based on a condition", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is a variable?",
         "answers": [
             { "text": "A storage location in memory that holds data", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is a constant?",
         "answers": [
             { "text": "A variable whose value cannot be changed", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming approach", "correct": false }
         ]
     },
     {
         "question": "What is a pointer?",
         "answers": [
             { "text": "A variable that stores the memory address of another variable", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is a reference?",
         "answers": [
             { "text": "An alias for an existing variable", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is a data type?",
         "answers": [
             { "text": "A classification that specifies which type of value a variable can hold", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is type casting?",
         "answers": [
             { "text": "Converting one data type into another", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is an interface?",
         "answers": [
             { "text": "A contract that defines the signatures of methods that must be implemented", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming concept", "correct": false }
         ]
     },
     {
         "question": "What is an abstract class?",
         "answers": [
             { "text": "A class that cannot be instantiated and may contain abstract methods", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming approach", "correct": false }
         ]
     },
     {
         "question": "What is a static method?",
         "answers": [
             { "text": "A method that belongs to the class rather than any particular object instance", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming approach", "correct": false }
         ]
     },
     {
         "question": "What is a virtual method?",
         "answers": [
             { "text": "A method that can be overridden in derived classes", "correct": true },
-            { "text": "A type of database", "correct": false },
-            { "text": "A debugging tool", "correct": false },
-            { "text": "A programming paradigm based on procedure calls", "correct": false }
+            { "text": "A type of database system", "correct": false },
+            { "text": "A debugging utility", "correct": false },
+            { "text": "A procedural programming approach", "correct": false }
         ]
     },
     {
@@ -373,7 +373,7 @@
         "answers": [
             { "text": "A software development kit for Java, including the compiler and runtime environment", "correct": true },
             { "text": "A Java library for web development", "correct": false },
-            { "text": "A debugging tool for Java", "correct": false },
+            { "text": "A debugging utility for Java", "correct": false },
             { "text": "A Java bytecode optimizer", "correct": false }
         ]
     },
@@ -391,125 +391,35 @@
         "answers": [
             { "text": "The compiled form of a Java program that is executed by the JVM", "correct": true },
             { "text": "A Java library for web development", "correct": false },
-            { "text": "A debugging tool for Java", "correct": false },
+            { "text": "A debugging utility for Java", "correct": false },
             { "text": "A Java bytecode optimizer", "correct": false }
         ]
     },
     {
         "question": "What is the `public static void main(String[] args)` method in Java?",
         "answers": [
-            { "text": "The entry point for a Java application", "correct": true },
-            { "text": "A method for garbage collection", "correct": false },
-            { "text": "A method for handling exceptions", "correct": false },
-            { "text": "A method for file I/O", "correct": false }
+            { "text": "The entry point of a Java program", "correct": true },
+            { "text": "A Java library for GUI development", "correct": false },
+            { "text": "A debugging utility for Java", "correct": false },
+            { "text": "A version control system", "correct": false }
         ]
     },
     {
-        "question": "What is the `final` keyword in Java?",
+        "question": "What is a package in Java?",
         "answers": [
-            { "text": "Used to indicate that a variable, method, or class cannot be changed", "correct": true },
-            { "text": "Used for garbage collection", "correct": false },
-            { "text": "Used for exception handling", "correct": false },
-            { "text": "Used for file I/O", "correct": false }
-        ]
-    },
-    {
-        "question": "What is the `static` keyword in Java?",
-        "answers": [
-            { "text": "Used to indicate that a variable or method belongs to the class rather than an instance", "correct": true },
-            { "text": "Used for garbage collection", "correct": false },
-            { "text": "Used for exception handling", "correct": false },
-            { "text": "Used for file I/O", "correct": false }
-        ]
-    },
-    {
-        "question": "What is the `this` keyword in Java?",
-        "answers": [
-            { "text": "Refers to the current instance of the class", "correct": true },
-            { "text": "Used for garbage collection", "correct": false },
-            { "text": "Used for exception handling", "correct": false },
-            { "text": "Used for file I/O", "correct": false }
-        ]
-    },
-    {
-        "question": "What is the `super` keyword in Java?",
-        "answers": [
-            { "text": "Used to refer to the immediate parent class", "correct": true },
-            { "text": "Used for garbage collection", "correct": false },
-            { "text": "Used for exception handling", "correct": false },
-            { "text": "Used for file I/O", "correct": false }
-        ]
-    },
-    {
-        "question": "What is garbage collection in Java?",
-        "answers": [
-            { "text": "Automatic memory management to reclaim unused memory", "correct": true },
+            { "text": "A way to organize related classes and interfaces", "correct": true },
             { "text": "A Java library for web development", "correct": false },
-            { "text": "A debugging tool for Java", "correct": false },
+            { "text": "A debugging utility for Java", "correct": false },
             { "text": "A Java bytecode optimizer", "correct": false }
         ]
     },
     {
-        "question": "What are Java packages?",
+        "question": "What is an exception in Java?",
         "answers": [
-            { "text": "Namespaces for organizing classes and interfaces", "correct": true },
-            { "text": "A Java library for web development", "correct": false },
-            { "text": "A debugging tool for Java", "correct": false },
-            { "text": "A Java bytecode optimizer", "correct": false }
-        ]
-    },
-    {
-        "question": "What is `System.out.println()` in Java?",
-        "answers": [
-            { "text": "A method for printing \"text\" to the console", "correct": true },
-            { "text": "A method for garbage collection", "correct": false },
-            { "text": "A method for handling exceptions", "correct": false },
-            { "text": "A method for file I/O", "correct": false }
-        ]
-    },
-    {
-        "question": "What is the difference between `==` and `equals()` in Java?",
-        "answers": [
-            { "text": "`==` checks for reference equality, while `equals()` checks for content equality", "correct": true },
-            { "text": "`==` and `equals()` do the same thing", "correct": false },
-            { "text": "`==` checks for content equality, while `equals()` checks for reference equality", "correct": false },
-            { "text": "`==` is used for arithmetic operations", "correct": false }
-        ]
-    },
-    {
-        "question": "What is method overloading in Java?",
-        "answers": [
-            { "text": "Defining multiple methods with the same name but different parameters", "correct": true },
-            { "text": "Changing the behavior of an inherited method", "correct": false },
-            { "text": "Defining a method that can take any number of arguments", "correct": false },
-            { "text": "Defining a method that can be overridden", "correct": false }
-        ]
-    },
-    {
-        "question": "What is method overriding in Java?",
-        "answers": [
-            { "text": "Changing the behavior of an inherited method", "correct": true },
-            { "text": "Defining multiple methods with the same name but different parameters", "correct": false },
-            { "text": "Defining a method that can take any number of arguments", "correct": false },
-            { "text": "Defining a method that cannot be overridden", "correct": false }
-        ]
-    },
-    {
-        "question": "What is a JavaBean?",
-        "answers": [
-            { "text": "A reusable software component that follows specific conventions", "correct": true },
-            { "text": "A Java library for web development", "correct": false },
-            { "text": "A debugging tool for Java", "correct": false },
-            { "text": "A Java bytecode optimizer", "correct": false }
-        ]
-    },
-    {
-        "question": "What is the `try-catch` block in Java?",
-        "answers": [
-            { "text": "Used for exception handling", "correct": true },
-            { "text": "Used for garbage collection", "correct": false },
-            { "text": "Used for file I/O", "correct": false },
-            { "text": "Used for multithreading", "correct": false }
+            { "text": "An abnormal event or error that occurs during the execution of a Java program", "correct": true },
+            { "text": "A Java library for GUI development", "correct": false },
+            { "text": "A debugging utility for Java", "correct": false },
+            { "text": "A version control system", "correct": false }
         ]
     },
     {
@@ -828,102 +738,12 @@
         ]
     },
     {
-        "question": "What is a radix tree?",
+        "question": "What is a hash function?",
         "answers": [
-            { "text": "A tree data structure that represents a space-optimized trie", "correct": true },
-            { "text": "A data structure that stores elements in a First-In-First-Out (FIFO) manner", "correct": false },
+            { "text": "A function that takes an input (or 'key') and returns a fixed-size string of bytes", "correct": true },
             { "text": "A data structure that stores key-value pairs", "correct": false },
-            { "text": "A binary tree where each node has exactly two children", "correct": false }
-        ]
-    },
-    {
-        "question": "What is a bloom filter?",
-        "answers": [
-            { "text": "A space-efficient probabilistic data structure used to test whether an element is a member of a set", "correct": true },
             { "text": "A data structure that stores elements in a First-In-First-Out (FIFO) manner", "correct": false },
-            { "text": "A data structure that stores key-value pairs", "correct": false },
             { "text": "A binary tree where each node has exactly two children", "correct": false }
-        ]
-    },
-    {
-        "question": "What is quicksort?",
-        "answers": [
-            { "text": "A sorting algorithm that uses a divide-and-conquer strategy", "correct": true },
-            { "text": "A data structure that stores elements in a First-In-First-Out (FIFO) manner", "correct": false },
-            { "text": "A data structure that stores key-value pairs", "correct": false },
-            { "text": "A binary tree where each node has exactly two children", "correct": false }
-        ]
-    },
-    {
-        "question": "What is mergesort?",
-        "answers": [
-            { "text": "A sorting algorithm that divides the array into smaller subarrays and then combines them in a sorted manner", "correct": true },
-            { "text": "A data structure that stores elements in a First-In-First-Out (FIFO) manner", "correct": false },
-            { "text": "A data structure that stores key-value pairs", "correct": false },
-            { "text": "A binary tree where each node has exactly two children", "correct": false }
-        ]
-    },
-    {
-        "question": "What is bubblesort?",
-        "answers": [
-            { "text": "A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order", "correct": true },
-            { "text": "A data structure that stores elements in a First-In-First-Out (FIFO) manner", "correct": false },
-            { "text": "A data structure that stores key-value pairs", "correct": false },
-            { "text": "A binary tree where each node has exactly two children", "correct": false }
-        ]
-    },
-    {
-        "question": "What is insertion sort?",
-        "answers": [
-            { "text": "A simple sorting algorithm that builds the final sorted array one item at a time", "correct": true },
-            { "text": "A data structure that stores elements in a First-In-First-Out (FIFO) manner", "correct": false },
-            { "text": "A data structure that stores key-value pairs", "correct": false },
-            { "text": "A binary tree where each node has exactly two children", "correct": false }
-        ]
-    },
-    {
-        "question": "What is selection sort?",
-        "answers": [
-            { "text": "A simple sorting algorithm that divides the input list into two parts: the sorted part at the left end and the unsorted part at the right end", "correct": true },
-            { "text": "A data structure that stores elements in a First-In-First-Out (FIFO) manner", "correct": false },
-            { "text": "A data structure that stores key-value pairs", "correct": false },
-            { "text": "A binary tree where each node has exactly two children", "correct": false }
-        ]
-    },
-    {
-        "question": "What is radix sort?",
-        "answers": [
-            { "text": "A non-comparative sorting algorithm that works by distributing elements into buckets based on their individual digits", "correct": true },
-            { "text": "A data structure that stores elements in a First-In-First-Out (FIFO) manner", "correct": false },
-            { "text": "A data structure that stores key-value pairs", "correct": false },
-            { "text": "A binary tree where each node has exactly two children", "correct": false }
-        ]
-    },
-    {
-        "question": "What is Agile methodology?",
-        "answers": [
-            { "text": "A flexible and iterative approach to software development that emphasizes collaboration, customer feedback, and small, rapid releases", "correct": true },
-            { "text": "A method for building software that follows a linear and sequential approach", "correct": false },
-            { "text": "A methodology that focuses on creating comprehensive documentation before starting development", "correct": false },
-            { "text": "A software development approach that does not involve any specific methodology", "correct": false }
-        ]
-    },
-    {
-        "question": "What is Scrum?",
-        "answers": [
-            { "text": "An Agile framework that divides work into time-boxed iterations called sprints", "correct": true },
-            { "text": "A software development methodology that focuses on extensive planning and documentation", "correct": false },
-            { "text": "A project management technique for managing resources", "correct": false },
-            { "text": "A programming language used for web development", "correct": false }
-        ]
-    },
-    {
-        "question": "What is Kanban?",
-        "answers": [
-            { "text": "A visual Agile framework for managing work as it flows through various stages of a process", "correct": true },
-            { "text": "A software development methodology that emphasizes strict adherence to predefined rules and processes", "correct": false },
-            { "text": "A project management technique for estimating project timelines", "correct": false },
-            { "text": "A type of database management system", "correct": false }
         ]
     },
     {
@@ -956,7 +776,7 @@
     {
         "question": "What is Behavior-Driven Development (BDD)?",
         "answers": [
-            { "text": "A software development approach that focuses on defining and testing behavior from the end user\"s perspective", "correct": true },
+            { "text": "A software development approach that focuses on defining and testing behavior from the end user's perspective", "correct": true },
             { "text": "A method for designing user interfaces", "correct": false },
             { "text": "A project management technique for managing communication within teams", "correct": false },
             { "text": "A programming language used for game development", "correct": false }
@@ -1339,14 +1159,11 @@
             { "text": "A type of NoSQL database", "correct": false },
             { "text": "A web server software", "correct": false }
         ]
-    },
-    {
-        "question": "What is a Virtual Machine (VM)?",
-        "answers": [
-            { "text": "A software-based emulation of a physical computer that runs an operating system and applications as if they were on dedicated hardware", "correct": true },
-            { "text": "A database management system", "correct": false },
-            { "text": "A programming language", "correct": false },
-            { "text": "A web server software", "correct": false }
-        ]
     }
 ]
+
+
+
+
+
+
