@@ -1365,20 +1365,32 @@ const questions = [
 
 
 nextButton.addEventListener('click', () => {
-    const selectedAnswer = document.querySelector('input[name="answer"]:checked').value;
+    const selectedAnswer = document.querySelector('input[name="answer"]:checked');
     if (!selectedAnswer) return;
     const answerCorrect = selectedAnswer.value === 'true';
     if (answerCorrect) {
-        score++;
-        correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
-        document.getElementById('feedback').textContent = 'Correct!';
+      score++;
+      correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
+      showFeedback('Correct!', 'green');
     } else {
-        incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
-        document.getElementById('feedback').textContent = 'Incorrect!';
+      incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
+      showFeedback('Incorrect!', 'red');
     }
     currentQuestionIndex++;
     showNextQuestion();
-});
+  });
+
+function showFeedback(text, color) {
+    const feedback = document.getElementById('feedback');
+    feedback.textContent = text;
+    feedback.style.color = color;
+    
+    // Delay the removal of feedback text
+    setTimeout(() => {
+        feedback.textContent = '';
+    }, 5000); // 5000 milliseconds (5 seconds)
+}
+
 
 startGame();
 
