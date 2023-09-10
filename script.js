@@ -56,8 +56,10 @@ function showNextQuestion() {
     if (selectedAnswer) {
         const answerCorrect = selectedAnswer.value === 'true';
         if (answerCorrect) {
+            correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
             showFeedback('Correct!', 'green');
         } else {
+            incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
             showFeedback('Incorrect!', 'red');
         }
     } else {
@@ -67,6 +69,11 @@ function showNextQuestion() {
     if (currentQuestionIndex < shuffledQuestions.length) {
         showQuestion(shuffledQuestions[currentQuestionIndex]);
         questionNumber.textContent = `${currentQuestionIndex + 1}/${shuffledQuestions.length}`;
+        
+        // Calculate the score and display it
+        const totalQuestions = currentQuestionIndex;
+        const score = totalQuestions > 0 ? ((correctAnswers.length / totalQuestions) * 100).toFixed(2) : 0;
+        scoreDisplay.textContent = `Score: ${score}%`;
     } else {
         showResult();
     }
