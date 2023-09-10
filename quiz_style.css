@@ -1,4 +1,4 @@
-/* Updated CSS with an optimal color theme for learning */
+/* Updated CSS with styled buttons and an optimal color theme for learning */
 
 /* Buttons */
 .btn {
@@ -10,6 +10,8 @@
   cursor: pointer;
   font-family: 'Lexend', sans-serif; /* Lexend font */
   font-size: 18px; /* Larger font size */
+  border-radius: 5px; /* Rounded corners for buttons */
+  transition: background-color 0.3s; /* Smooth background color transition */
 }
 
 .btn:hover {
@@ -74,7 +76,7 @@ body {
   background-color: rgba(0, 128, 0, 0.2); /* Light green background for correct answers */
   border: 1px solid #B0B0B0; /* Light gray border */
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 5px; /* Rounded corners for answer box */
   font-family: 'Lexend', sans-serif;
   font-size: 20px; /* Larger font size */
   color: white; /* White text */
