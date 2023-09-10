@@ -44,13 +44,20 @@
   }
   
   #feedback-container {
-    text-align: center;
+    position: relative;
     height: 50px; /* Adjust the height as needed */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    text-align: center;
   }
   
   #feedback {
-    margin-bottom: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with transparency */
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 5px;
   }
