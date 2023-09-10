@@ -1381,10 +1381,6 @@ nextButton.addEventListener('click', () => {
     showNextQuestion();
 });
 
-finishButton.addEventListener('click', () => {
-    finishQuiz();
-});
-
 function showFeedback(text, color) {
     const feedback = document.getElementById('feedback');
     feedback.textContent = text;
@@ -1436,6 +1432,11 @@ function showNextQuestion() {
     if (currentQuestionIndex < shuffledQuestions.length) {
         showQuestion(shuffledQuestions[currentQuestionIndex]);
         document.getElementById('question-number').textContent = `${currentQuestionIndex + 1}/${shuffledQuestions.length}`;
+        // Calculate and display the score based on questions answered
+        const answeredQuestions = currentQuestionIndex;
+        const finalScore = (score / answeredQuestions) * 100;
+        const resultMessage = `Your Score: ${finalScore.toFixed(2)}%`;
+        result.innerHTML = `<h2>${resultMessage}</h2>`;
     } else {
         showResult();
     }
@@ -1472,16 +1473,4 @@ function showResult() {
         <h3>Incorrect Answers:</h3>
         <ul>${incorrectAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
     `;
-}
-
-function finishQuiz() {
-    // Calculate the final score based on questions answered
-    const answeredQuestions = currentQuestionIndex;
-    const finalScore = (score / answeredQuestions) * 100;
-    const resultMessage = `Your Final Score: ${finalScore.toFixed(2)}%`;
-    result.innerHTML = `<h2>${resultMessage}</h2>`;
-
-    // Hide the "Finish" and "Next" buttons
-    finishButton.style.display = 'none';
-    nextButton.style.display = 'none';
 }
