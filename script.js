@@ -5,9 +5,9 @@ const nextButton = document.getElementById('next-button');
 const recapButton = document.getElementById('recap-button'); // Rename to Recap button
 const result = document.getElementById('result');
 const previousAnswer = document.getElementById('previous-answer'); // Added Previous Answer element
+const scoreDisplay = document.getElementById('score-display'); // Added Score Display element
 
 let shuffledQuestions, currentQuestionIndex;
-let score = 0;
 let correctAnswers = [];
 let incorrectAnswers = [];
 
@@ -28,7 +28,6 @@ nextButton.addEventListener('click', () => {
     if (!selectedAnswer) return;
     const answerCorrect = selectedAnswer.value === 'true';
     if (answerCorrect) {
-        score++;
         correctAnswers.push(shuffledQuestions[currentQuestionIndex].question);
         showFeedback('Correct!', 'green');
     } else {
@@ -72,16 +71,19 @@ function showNextQuestion() {
         showResult();
     }
     
-    // Display the score after each question
-    result.innerHTML = `
-        <h2>Your Score: ${score}</h2>
-    `;
+    // Calculate the score and display it
+    const totalQuestions = currentQuestionIndex;
+    const score = totalQuestions > 0 ? (correctAnswers.length / totalQuestions) * 100 : 0;
+    scoreDisplay.textContent = `Score: ${score.toFixed(2)}%`;
 }
 
 function showQuestion(question) {
     questionNumber.innerText = `Question ${currentQuestionIndex + 1}`;
     questionContainer.innerText = question.question;
     answerForm.innerHTML = '';
+
+    // Resize the question container
+    questionContainer.style.height = 'fit-content';
 
     // Shuffle the answers randomly
     const shuffledAnswers = question.answers.sort(() => Math.random() - 0.5);
@@ -103,7 +105,7 @@ function showQuestion(question) {
 
 function showResult() {
     result.innerHTML = `
-        <h2>Your Score: ${score}</h2>
+        <h2>Your Score: ${scoreDisplay.textContent}</h2>
         <h3>Correct Answers:</h3>
         <ul>${correctAnswers.map(q => `<li>${q}</li>`).join('')}</ul>
         <h3>Incorrect Answers:</h3>
