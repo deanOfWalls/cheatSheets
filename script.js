@@ -1390,10 +1390,10 @@ recapButton.addEventListener('click', () => {
 });
 
 function showFeedback(text, color) {
-    const feedback = document.getElementById('feedback');
-    feedback.textContent = text;
+    const feedback = document.getElementById('previous-answer');
+    feedback.textContent = `Previous answer: ${text}`;
     feedback.style.color = color;
-    feedback.style.opacity = '1'; // Set opacity to 1 (fully visible)
+}
 
     // Delay the removal of feedback text
     setTimeout(() => {
