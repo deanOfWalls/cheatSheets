@@ -1,87 +1,81 @@
-/* Updated CSS for your quiz_style.css */
+/* Updated CSS with an optimal color theme for learning */
 
-body {
-  background-color: #f0f0f0;
-  font-family: 'Lexend', sans-serif;
-  font-size: 18px;
-}
-
+/* Buttons */
 .btn {
-  padding: 12px 18px;
+  padding: 12px 18px; /* Slightly larger buttons */
   margin: 10px;
   border: none;
-  background-color: #007BFF;
+  background-color: #4CAF50; /* Green background */
   color: white;
   cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
+  font-family: 'Lexend', sans-serif; /* Lexend font */
+  font-size: 18px; /* Larger font size */
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: #45A049; /* Darker green on hover */
 }
 
+/* Page Background */
+body {
+  background-color: #E0F2F1; /* Light blue background */
+  font-family: 'Lexend', sans-serif; /* Lexend font */
+  font-size: 20px; /* Slightly larger font size */
+}
+
+/* Quiz Container */
 #quiz-container {
-  max-width: 800px;
+  max-width: 700px; /* Slightly wider container */
   margin: 50px auto;
   padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  border: 1px solid #B0B0B0; /* Light gray border */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  background-color: white; /* White background */
 }
 
+/* Result Container */
 #result {
-  max-width: 800px;
+  max-width: 700px;
   margin: 50px auto;
   padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  border: 1px solid #B0B0B0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  background-color: white;
 }
 
+/* Button Container */
 #button-container {
   text-align: center;
   margin-top: 20px;
 }
 
-/* Style for the Quiz Result label */
+/* Quiz Result Label */
 #result h2 {
   text-align: center;
   font-size: 24px;
   margin-bottom: 20px;
 }
 
+/* Feedback Container */
 #feedback-container {
   text-align: center;
-}
-
-#feedback-container {
   position: relative;
   height: 50px;
-  text-align: center;
 }
 
-#feedback {
+/* Previous Answer Text */
+#previous-answer {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   margin: 50px auto 10px;
   width: fit-content;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid #ddd;
+  background-color: rgba(0, 128, 0, 0.2); /* Light green background for correct answers */
+  border: 1px solid #B0B0B0; /* Light gray border */
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 16px;
-}
-
-/* Recolor previous answer text */
-#previous-answer {
-  color: #008000;
-}
-
-#previous-answer.incorrect {
-  color: #ff0000;
+  font-family: 'Lexend', sans-serif;
+  font-size: 20px; /* Larger font size */
+  color: white; /* White text */
 }
