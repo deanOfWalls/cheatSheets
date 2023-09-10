@@ -29,3 +29,8 @@
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     background-color: white; /* Added a background color */
 }
+
+#feedback {
+    transition: opacity 1s; 
+    opacity: 0; 
+}

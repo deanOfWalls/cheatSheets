@@ -1380,14 +1380,18 @@ nextButton.addEventListener('click', () => {
     showNextQuestion();
   });
 
-function showFeedback(text, color) {
+  function showFeedback(text, color) {
     const feedback = document.getElementById('feedback');
     feedback.textContent = text;
     feedback.style.color = color;
-    
+    feedback.style.opacity = '1'; // Set opacity to 1 (fully visible)
+
     // Delay the removal of feedback text
     setTimeout(() => {
-        feedback.textContent = '';
+        feedback.style.opacity = '0'; // Set opacity to 0 (invisible)
+        setTimeout(() => {
+            feedback.textContent = ''; // Clear the text
+        }, 1000); // Wait for 1 second for the fade-out to complete
     }, 5000); // 5000 milliseconds (5 seconds)
 }
 
