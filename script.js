@@ -1424,7 +1424,7 @@ function showNextQuestion() {
       // Add the fade-out class after a delay
       setTimeout(() => {
         feedbackElement.classList.add('fade-out');
-      }, 5000);
+      }, 2500);
     } else {
       document.getElementById('feedback').textContent = ''; // Clear feedback
     }
