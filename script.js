@@ -1441,11 +1441,15 @@ function showNextQuestion() {
   
   
 
-function showQuestion(question) {
+  function showQuestion(question) {
     questionNumber.innerText = `Question ${currentQuestionIndex + 1}`;
     questionContainer.innerText = question.question;
     answerForm.innerHTML = '';
-    question.answers.forEach((answer, index) => {
+
+    // Shuffle the answers randomly
+    const shuffledAnswers = question.answers.sort(() => Math.random() - 0.5);
+
+    shuffledAnswers.forEach((answer, index) => {
         const input = document.createElement('input');
         input.type = 'radio';
         input.name = 'answer';
@@ -1459,6 +1463,7 @@ function showQuestion(question) {
         answerForm.appendChild(document.createElement('br'));
     });
 }
+
 
 function showResult() {
     result.innerHTML = `
