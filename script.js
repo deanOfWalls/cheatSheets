@@ -46,6 +46,7 @@ nextButton.addEventListener('click', () => {
     } else {
         incorrectAnswers.push(shuffledQuestions[currentQuestionIndex].question);
         showFeedback('Incorrect!', 'orange', false); // Change background color to orange
+        showResult(); // Update the incorrect answers display
     }
     totalAnswered++; // Increment the total answered questions
     currentQuestionIndex++;
