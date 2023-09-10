@@ -99,6 +99,7 @@ body {
   background-color: #E0F2F1;
   font-family: 'Lexend', sans-serif;
   font-size: 20px;
+  line-height: 1.6; /* Add padding between lines of text within the body */
 }
 
 /* Quiz Container */
