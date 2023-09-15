@@ -6,3 +6,6 @@ These are infographics I've created to aid with teaching/studying OOP principles
 
 ## Test Structure
 ![](./testStructure.png)
+
+## DOM
+![](./DOM.png)
