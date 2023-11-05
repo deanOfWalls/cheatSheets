@@ -15,3 +15,6 @@ These are infographics I've created to aid with teaching/studying OOP principles
 
 ## DOM
 ![](./DOM.png)
+
+## File Tree Visualization
+![](./myinfographics/fileTree.png)
