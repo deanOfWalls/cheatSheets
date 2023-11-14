@@ -2,19 +2,14 @@
 These are infographics I've created to aid with teaching/studying OOP principles, etc.
 
 ## Java Method Anatomy
-![](./myinfographics/JavaMethodAnatomy.png)
-
-## Constructors
-![](./constructors.png)
+![](./myInfographics/JavaMethodAnatomy.png)
 
 ## Java Class-Constructor-Object-Method-Relationship
 ![](./myInfographics/JavaClassConstructorObjectMethodRelationship.png)
 
 ## Test Structure
-![](./testStructure.png)
+![](./myInfographics/testStructure.png)
 
-## DOM
-![](./DOM.png)
 
 ## File Tree Visualization
-![](./myinfographics/fileTree.png)
+![](./myInfographics/fileTree.png)
