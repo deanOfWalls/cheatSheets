@@ -60,6 +60,3 @@ This study guide covers essential topics and concepts you should be familiar wit
 ## Resources
 - **Official Java Documentation**
 - **Online Courses**: Platforms like Coursera, Udemy, or Pluralsight offer comprehensive courses.
-- **Books**: "Effective Java" by Joshua Bloch, "Java: The Complete Reference" by Herbert Schildt.
-
-Remember, the key to a successful interview is a solid understanding of the fundamentals and the ability to apply this knowledge to solve problems. Practice coding, familiarize yourself with the concepts, and you'll be well-prepared.
