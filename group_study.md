@@ -1,0 +1,98 @@
+## The following was scraped from the ZCW 6.0 Study Document on Google Docs
+
+- Name the (8) primitive data types.
+- What is the difference between StringBuilder() and StringBuffer()?
+- What are the 4 principles of Object Oriented Programming?
+- Explain abstraction.
+- Explain polymorphism.
+- Explain inheritance.
+- Explain encapsulation.
+- What are the 4 access modifiers and their access specifiers?
+- What are the 5 SOLID principles?
+- Explain "Single Responsibility."
+- Explain "Open/Close Principle."
+- Explain "Liskov's Substitution Principle."
+- Explain "Interface Segregation Principle."
+- Explain "Dependency Inversion."
+- What is the difference between overloading and overriding?
+- What is the difference between an abstract class and an interface?
+- For Interface and Abstract Class, why would you use one over the other?
+- What is the difference between "Collection" and "Collections"?
+- What is an ArrayStoreException? Is it checked or unchecked?
+- Describe JVM, JDK, and JRE.
+- What is a HashMap?
+- Why is a HashMap unsorted?
+- What is the difference between Comparable and Comparator?
+- What is the difference between Iterable and Iterator?
+- What is the Class Loader?
+- What are the 5 exception keywords?
+- Difference between throw and throws?
+- Difference between Final, Finally, Finalize?
+- What is Dictionary in Java?
+- Which collection is the fastest?
+- What is the difference between a list and a set?
+- What is the difference between instance methods and static methods?
+- What is an instance variable?
+- What is the finalize method?
+- What is an access modifier?
+- What is an abstract class?
+- What is an abstract method?
+- What is an API?
+- What is autoboxing?
+- What is a class variable?
+- What is a class path?
+- What does DOM stand for?
+- What is an enumerated type?
+- Why might you make a class an enum?
+- Explain garbage collection.
+- Explain what a generic is.
+- Explain type erasure.
+- Explain JAR (Java Archive).
+- Why is Java considered dynamic?
+- What does it mean to be multithreaded?
+- What does it mean to be protected?
+- What is serialization?
+- What is deserialization?
+- What is a singleton?
+- FIFO, LIFO, or either? (Queue, stack, deque)
+- What is the difference between a queue and a deque?
+- How do you pronounce 'deque'?
+- What are design patterns?
+- What is a decorator pattern?
+- What is an Observer pattern?
+- What is a Factory pattern?
+- What is a Command pattern?
+- What is an Adapter pattern?
+- What is a Facade pattern?
+- What is the difference between Adapter and Facade?
+- What is a template Method pattern?
+- What is an anonymous inner class?
+- What is a lambda expression?
+- What is a functional interface?
+- List the functional interfaces and their functional methods.
+- What is functional programming?
+- What are the FIRST principles of TDD?
+- What is the difference between composition and inheritance?
+- Why might you prefer composition over inheritance?
+- Why might you prefer inheritance over composition?
+- What is a thread?
+- What is an advantage of Java (with its JVM) over other languages that work from the hardware?
+- What is Stream in Java?
+- What are some intermediate operations of the Stream API?
+- What are some terminal operations of the Stream API?
+- Why might you use Streams?
+- Why would you use an array over an arraylist and vice versa?
+- What is Project Lombok? What are some things that it is used for?
+- What is deadlock?
+- What are semaphores?
+- Breadth-first search VS Depth-first search.
+- What is Dijkstra's algorithm?
+- What are the differences between the different versions of Java?
+- What are some potential new features that the Java developers are likely to add to the language in future updates?
+- What are the two basic methods of creating threads in Java?
+- Define reflection.
+- What is a lambda?
+- What is the DRY coding principle?
+- What is the WET coding principle?
+
+
