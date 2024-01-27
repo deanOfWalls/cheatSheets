@@ -1,0 +1,78 @@
+Chunk 1: Java Basics and Data Types
+
+    Name the (8) primitive data types.
+    What is the difference between "Collection" and "Collections"?
+    What is a HashMap?
+    Why is a HashMap unsorted?
+    Describe JVM, JDK, and JRE.
+    What is a Class Loader?
+    What is autoboxing?
+    What does DOM stand for?
+    Why is Java considered dynamic?
+    What does it mean to be multithreaded?
+    What are the two basic methods of creating threads in Java?
+Chunk 2: Object-Oriented Programming (OOP)
+
+    What are the 4 principles of Object-Oriented Programming?
+    Explain abstraction.
+    Explain polymorphism.
+    Explain inheritance.
+    Explain encapsulation.
+    What are the 4 access modifiers and their access specifiers?
+    What is the difference between an abstract class and an interface?
+    For Interface and Abstract Class, why would you use one over the other?
+    What is an abstract class?
+    What is an abstract method?
+    What is an access modifier?
+    What is an instance variable?
+
+Chunk 3: Java Collections and Comparisons
+
+    What is the difference between Comparable and Comparator?
+    What is the difference between a list and a set?
+    What is a singleton?
+    FIFO, LIFO, or either? (Queue, stack, deque)
+    What is the difference between a queue and a deque?
+    How do you pronounce 'deque'?
+    Why would you use Streams?
+    Why would you use an array over an arraylist and vice versa?
+Chunk 4: Threading and Concurrency
+
+    What is a thread?
+    What is an advantage of Java (with its JVM) over other languages that work from the hardware?
+    What are semaphores?
+    What is deadlock?
+    What are the two basic methods of creating threads in Java?
+
+Chunk 5: Design Patterns and Advanced Concepts
+
+    What are design patterns?
+    What is a decorator pattern?
+    What is an Observer pattern?
+    What is a Factory pattern?
+    What is a Command pattern?
+    What is an Adapter pattern?
+    What is a Facade pattern?
+    What is the difference between Adapter and Facade?
+    What is a template Method pattern?
+    What is type erasure?
+    What is serialization?
+    What is deserialization?
+    What are some intermediate operations of the Stream API?
+    What are some terminal operations of the Stream API?
+    What is Project Lombok? What are some things that it is used for?
+    Breadth-first search VS Depth-first search.
+    What is Dijkstra's algorithm?
+    What are the differences between the different versions of Java?
+    What are some potential new features that the Java developers are likely to add to the language in future updates?
+    Define reflection.
+    What is a lambda?
+    What is a functional interface?
+    List the functional interfaces and their functional methods.
+    What is functional programming?
+    What are the FIRST principles of TDD?
+    What is the difference between composition and inheritance?
+    Why might you prefer composition over inheritance?
+    Why might you prefer inheritance over composition?
+    What is the DRY coding principle?
+    What is the WET coding principle?
