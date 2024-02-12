@@ -1,0 +1,4 @@
+alt  + \  Jumps to beginning of file
+alt  + a  Sets mark
+alt  + /  Jumps to end of file
+ctrl + ^  Copies selection
